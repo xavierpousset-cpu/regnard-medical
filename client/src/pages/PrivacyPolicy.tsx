@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
@@ -6,7 +8,9 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
+      <main className="flex-1 pt-24 pb-16">
       <div className="container max-w-4xl">
         {/* Header */}
         <div className="mb-12">
@@ -214,6 +218,8 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
   );
 }

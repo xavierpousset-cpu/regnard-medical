@@ -8,6 +8,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 const navItems = [
   { label: "Expertise", href: "#expertise" },
@@ -48,11 +49,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              href="/"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-150"
             >
               <img
