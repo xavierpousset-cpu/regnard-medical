@@ -56,7 +56,7 @@ export default function Header() {
               className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-150"
             >
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/vsNlBdVUEUdrRtyF.svg"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/BeDJyMcSBxFSTGCS.png"
                 alt="Regnard Medical Logo"
                 className="h-10 w-10"
               />
