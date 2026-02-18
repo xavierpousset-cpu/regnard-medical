@@ -1,25 +1,33 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home Page - Regnard Medical
+ * Design: Industrial Minimalism
+ * - Minimalisme industriel sobre
+ * - Palette restreinte: blanc, gris béton, noir technique, accent bleu acier
+ * - Typographie: DM Sans (display) + IBM Plex Sans (body)
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+import ContactSection from "@/components/ContactSection";
+import ExpertiseSection from "@/components/ExpertiseSection";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ProductsSection from "@/components/ProductsSection";
+import ValuesSection from "@/components/ValuesSection";
+import WhyUsSection from "@/components/WhyUsSection";
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <ExpertiseSection />
+        <ProductsSection />
+        <ValuesSection />
+        <WhyUsSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }

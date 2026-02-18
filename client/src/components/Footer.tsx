@@ -1,0 +1,70 @@
+/**
+ * Footer - Regnard Medical
+ * Design: Industrial Minimalism
+ * - Footer sobre avec informations essentielles
+ */
+
+export default function Footer() {
+  return (
+    <footer className="bg-foreground text-background py-16">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Company info */}
+          <div>
+            <h3 className="font-display font-bold text-xl mb-4 tracking-tight">
+              REGNARD MEDICAL
+            </h3>
+            <p className="text-sm text-background/70 leading-relaxed">
+              Expertise et innovation au service du dispositif médical. Réparation, recherche et développement pour les établissements de santé.
+            </p>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
+              Services
+            </h4>
+            <ul className="space-y-2 text-sm text-background/70">
+              <li>Réparation de dispositifs médicaux</li>
+              <li>Maintenance biomédicale</li>
+              <li>Recherche & Développement</li>
+              <li>Bureau d'études médical</li>
+              <li>Solutions techniques sur mesure</li>
+            </ul>
+          </div>
+
+          {/* Keywords for SEO */}
+          <div>
+            <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
+              Expertise
+            </h4>
+            <ul className="space-y-2 text-sm text-background/70">
+              <li>MedTech France</li>
+              <li>Optimisation équipements hospitaliers</li>
+              <li>Conformité dispositifs médicaux</li>
+              <li>Innovation médicale</li>
+              <li>Partenaire établissements de santé</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-background/20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-background/60">
+              © {new Date().getFullYear()} Regnard Medical. Tous droits réservés.
+            </p>
+            <div className="flex gap-6 text-sm text-background/60">
+              <a href="#" className="hover:text-background transition-colors duration-150">
+                Mentions légales
+              </a>
+              <a href="#" className="hover:text-background transition-colors duration-150">
+                Politique de confidentialité
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
