@@ -104,7 +104,7 @@
   }
   
   h1 {
-    font-size: clamp(1.5rem, 5vw, 4rem); /* Responsive: 24px min, 5vw, 64px max */
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive: 32px min, 5vw, 64px max */
     line-height: 1.1;
   }
   
