@@ -11,7 +11,7 @@ import { CheckCircle2 } from "lucide-react";
 const products = [
   {
     name: "O-PREP®DIVAN",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/oQnUdzYkDmIvSQLP.svg",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/PkszOBngDOpNWnXd.png",
     benefits: [
       "Ergonomie optimisée pour le praticien",
       "Fiabilité éprouvée en environnement hospitalier",
@@ -63,9 +63,7 @@ export default function ProductsSection() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className={`w-full h-full object-contain ${
-                      index === 0 ? "mix-blend-lighten" : "object-cover"
-                    }`}
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
