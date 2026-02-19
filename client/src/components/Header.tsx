@@ -7,8 +7,11 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
+import { useLocation } from "wouter";
 
 const navItems = [
   { label: "Expertise", href: "#expertise", isExternal: false },
@@ -28,6 +31,8 @@ const navItems = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const { user, isAuthenticated, logout } = useAuth();
+  const [, setLocation] = useLocation();
 
   const scrollToSection = (href: string) => {
     setMobileMenuOpen(false);
@@ -72,7 +77,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <a
@@ -112,6 +117,47 @@ export default function Header() {
             >
               Contact
             </Button>
+
+            {/* Account Menu */}
+            {isAuthenticated && user ? (
+              <div className="relative group">
+                <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-1">
+                  Mon compte
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+                <div className="absolute right-0 mt-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="px-4 py-3 border-b border-border text-sm text-muted-foreground">
+                    {user.name || user.email}
+                  </div>
+                  {user.role === 'admin' && (
+                    <a
+                      href="/admin"
+                      className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150"
+                    >
+                      Dashboard Admin
+                    </a>
+                  )}
+                  <button
+                    onClick={() => {
+                      logout();
+                      setLocation('/');
+                    }}
+                    className="w-full text-left px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 flex items-center gap-2 rounded-b-lg"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Déconnexion
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => (window.location.href = getLoginUrl())}
+              >
+                Connexion
+              </Button>
+            )}
           </nav>
 
           {/* Mobile menu button */}
@@ -177,6 +223,43 @@ export default function Header() {
               >
                 Contact
               </Button>
+
+              {/* Mobile Account Menu */}
+              {isAuthenticated && user ? (
+                <div className="border-t border-border pt-4 mt-4 space-y-2">
+                  <div className="text-sm text-muted-foreground px-2">
+                    {user.name || user.email}
+                  </div>
+                  {user.role === 'admin' && (
+                    <a
+                      href="/admin"
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 rounded"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Dashboard Admin
+                    </a>
+                  )}
+                  <button
+                    onClick={() => {
+                      logout();
+                      setMobileMenuOpen(false);
+                      setLocation('/');
+                    }}
+                    className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 flex items-center gap-2 rounded"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Déconnexion
+                  </button>
+                </div>
+              ) : (
+                <Button
+                  variant="outline"
+                  onClick={() => (window.location.href = getLoginUrl())}
+                  className="w-full"
+                >
+                  Connexion
+                </Button>
+              )}
             </div>
           </nav>
         )}
