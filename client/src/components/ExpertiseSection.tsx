@@ -42,9 +42,6 @@ export default function ExpertiseSection() {
   return (
     <section className="py-32 bg-background">
       <div className="container">
-        {/* Section number */}
-        <div className="section-number mb-8">02 — Expertise</div>
-
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
           Une expertise technique complète au service de vos équipements médicaux

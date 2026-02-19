@@ -40,9 +40,6 @@ export default function ProductsSection() {
   return (
     <section className="py-32 bg-secondary">
       <div className="container">
-        {/* Section number */}
-        <div className="section-number mb-8">03 — Solutions</div>
-
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
           Des solutions techniques conçues pour l'excellence opérationnelle

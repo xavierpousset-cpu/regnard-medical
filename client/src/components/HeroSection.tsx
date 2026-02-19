@@ -31,9 +31,6 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-3xl">
-          {/* Section number - Industrial Minimalism signature */}
-          <div className="section-number mb-8 text-white/60">01 — Accueil</div>
-
           {/* Main Title */}
           <h1 className="text-white mb-6 tracking-tight">
             Expertise et Innovation au service du Médical

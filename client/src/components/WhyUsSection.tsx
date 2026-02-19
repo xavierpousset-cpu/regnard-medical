@@ -46,8 +46,6 @@ export default function WhyUsSection() {
       </div>
 
       <div className="container relative z-10">
-        {/* Section number */}
-        <div className="section-number mb-8">05 — Pourquoi Regnard Medical</div>
 
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">

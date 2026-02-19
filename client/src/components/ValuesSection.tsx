@@ -32,9 +32,6 @@ export default function ValuesSection() {
   return (
     <section className="py-32 bg-background">
       <div className="container">
-        {/* Section number */}
-        <div className="section-number mb-8">04 — Valeurs</div>
-
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
           Nos engagements
