@@ -107,16 +107,18 @@ export default function Services() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})`, backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0,0,0,0.4)' }}>
-        <div className="container">
+      <section className="pt-32 pb-20 bg-cover bg-center relative" style={{ backgroundImage: `url(${heroImage})` }}>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-slate-900 mb-4">
+            <h1 className="text-5xl font-bold text-white mb-4">
               Nos services
             </h1>
-            <p className="text-2xl text-slate-600 mb-2">
+            <p className="text-2xl text-white/90 mb-2">
               Maintenance, réparation et expertise du matériel médical
             </p>
-            <p className="text-lg text-slate-500 mb-8">
+            <p className="text-lg text-white/80 mb-8">
               Un savoir-faire industriel au service des établissements de santé
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
