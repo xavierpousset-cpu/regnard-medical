@@ -21,7 +21,7 @@ const products = [
   },
   {
     name: "O-PREP®ALTESSE",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/V8tu5qMPe1byRexDgMU2NQ/sandbox/BndEUYCABGUfi8qq8lXOOF-img-3_1771423124000_na1fn_cmQtaW5ub3ZhdGlvbg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVjh0dTVxTVBlMWJ5UmV4RGdNVTJOUS9zYW5kYm94L0JuZEVVWUNBQkdVZmk4cXE4bFhPT0YtaW1nLTNfMTc3MTQyMzEyNDAwMF9uYTFmbl9jbVF0YVc1dWIzWmhkR2x2YmcucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=t2vD6fQHdj-mI71sA5GHQtt3FHqu1hmQ5gVChdtDUPLTQaXnmTYHJRgKeiWq3sp13-dSIDhkcOcH6mnNmpN44UHRHXTiefuRil4Ng4OYhhwnWFo47sU1WSNa~IarAveA~zRf-9nFLSpErMEtx~KPLE5XSaeu2bGa1gHRyO-1GLgE4n~vi-LMhbIshCaNwCUL9xi7fO5ow0HlC2j2UE27~p5jw26Zlow9DAbvKwQH~X3cNewWI75OAditiMfflDmOTFH6M5K4iLh0CR6dYdtm2gdOO2xKvd7jmuNxLBu7YS9tec8~X1w8nXXh5vhHE0lNfj1nAg8o5~rU0wG24n0bdA__",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mMtGbBrysgNynIbs.png",
     benefits: [
       "Design innovant et fonctionnel",
       "Précision technique de pointe",
