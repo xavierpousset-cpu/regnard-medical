@@ -10,8 +10,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Questionnaire from "./pages/Questionnaire";
 import OPrepDivan from "./pages/OPrepDivan";
 import OPrepAltesse from "./pages/OPrepAltesse";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
