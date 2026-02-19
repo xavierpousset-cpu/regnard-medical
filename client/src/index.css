@@ -104,12 +104,12 @@
   }
   
   h1 {
-    font-size: clamp(2rem, 5vw, 4rem); /* Responsive: 32px min, 5vw, 64px max */
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive: 40px min, 6vw, 72px max */
     line-height: 1.1;
   }
   
   h2 {
-    font-size: clamp(1.25rem, 4vw, 2.625rem); /* Responsive: 20px min, 4vw, 42px max */
+    font-size: clamp(1.75rem, 4.5vw, 3.25rem); /* Responsive: 28px min, 4.5vw, 52px max */
     line-height: 1.15;
   }
   
