@@ -14,7 +14,6 @@ import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
 
 const navItems = [
-  { label: "Expertise", href: "#expertise", isExternal: false },
   {
     label: "Nos produits",
     href: "#",
@@ -24,9 +23,8 @@ const navItems = [
       { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
     ],
   },
-  { label: "Services", href: "/services", isExternal: false },
+  { label: "Nos services", href: "/services", isExternal: false },
   { label: "Forum", href: "/forum", isExternal: false },
-  { label: "Valeurs", href: "#valeurs", isExternal: false },
   { label: "À propos", href: "#about", isExternal: false },
 ];
 
