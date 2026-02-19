@@ -63,7 +63,9 @@ export default function ProductsSection() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-contain ${
+                      index === 0 ? "mix-blend-lighten" : "object-cover"
+                    }`}
                   />
                 </div>
               </div>
