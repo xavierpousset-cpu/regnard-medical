@@ -8,6 +8,8 @@
 - [x] Base de données MySQL avec tables users et quoteRequests
 - [x] Authentification OAuth Manus
 - [x] Lien "Mon compte" dans le header avec connexion/déconnexion
+- [x] Système de rôles superadmin pour gérer les administrateurs
+- [ ] Interface de gestion des admins dans le dashboard
 - [ ] Système de statuts pour les demandes (En attente, Contactée, Convertie, Perdue)
 - [ ] Emails automatiques aux prospects et administrateurs
 - [ ] Section Témoignages clients

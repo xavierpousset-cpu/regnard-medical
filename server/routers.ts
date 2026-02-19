@@ -3,7 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { z } from "zod";
-import { createQuoteRequest, getQuoteRequests } from "./db";
+import { createQuoteRequest, getQuoteRequests, getAllUsers, updateUserRole, deleteUser } from "./db";
 import { notifyOwner } from "./_core/notification";
 import { TRPCError } from "@trpc/server";
 
@@ -47,11 +47,43 @@ export const appRouter = router({
         return { success: true, id: (result as any).insertId || 0 };
       }),
     list: protectedProcedure.query(async ({ ctx }) => {
-      if (ctx.user.role !== 'admin') {
+      if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
         throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
       }
       return await getQuoteRequests();
     }),
+  }),
+
+  admin: router({
+    listUsers: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== 'superadmin') {
+        throw new TRPCError({ code: 'FORBIDDEN', message: 'Superadmin access required' });
+      }
+      return await getAllUsers();
+    }),
+    updateUserRole: protectedProcedure
+      .input(
+        z.object({
+          userId: z.number(),
+          role: z.enum(['user', 'admin', 'superadmin']),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Superadmin access required' });
+        }
+        await updateUserRole(input.userId, input.role);
+        return { success: true };
+      }),
+    deleteUser: protectedProcedure
+      .input(z.object({ userId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Superadmin access required' });
+        }
+        await deleteUser(input.userId);
+        return { success: true };
+      }),
   }),
 });
 

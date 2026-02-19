@@ -109,3 +109,31 @@ export async function getQuoteRequests() {
 
   return await db.select().from(quoteRequests);
 }
+
+// Admin management functions
+export async function getAllUsers() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  return await db.select().from(users);
+}
+
+export async function updateUserRole(userId: number, role: 'user' | 'admin' | 'superadmin') {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.update(users).set({ role }).where(eq(users.id, userId));
+}
+
+export async function deleteUser(userId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.delete(users).where(eq(users.id, userId));
+}
