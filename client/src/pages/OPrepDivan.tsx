@@ -104,7 +104,7 @@ export default function OPrepDivan() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/qX3Yq4fNJzKwL9mP2rS5tU.png"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/AjWtaixutMRRvwhz.png"
                 alt="O-PREP DIVAN - Système complet de préparation coloscopique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

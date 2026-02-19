@@ -104,7 +104,7 @@ export default function OPrepAltesse() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mN8pQ2rT5uV3wX6yZ9aB1c.png"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/nLnIeAFuhsQCBTNF.png"
                 alt="O-PREP ALTESSE - Solution légérée de préparation coloscopique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
