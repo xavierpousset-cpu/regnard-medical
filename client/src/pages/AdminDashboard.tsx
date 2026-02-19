@@ -9,30 +9,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { trpc } from "@/lib/trpc";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { Search, Download, Loader2, AlertCircle } from "lucide-react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
 
-export default function AdminDashboard() {
-  const { user, isAuthenticated, loading } = useAuth();
-  const [, setLocation] = useLocation();
+function AdminDashboardContent() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterProduct, setFilterProduct] = useState<string>("all");
-
-  // Rediriger si non authentifié ou non admin
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="animate-spin w-8 h-8" />
-      </div>
-    );
-  }
-
-  if (!isAuthenticated || user?.role !== "admin") {
-    setLocation("/");
-    return null;
-  }
 
   // Récupérer les demandes de devis
   const { data: quotes, isLoading, error } = trpc.quotes.list.useQuery();
@@ -54,7 +38,7 @@ export default function AdminDashboard() {
   }, [quotes, searchTerm, filterProduct]);
 
   // Exporter en CSV
-  const handleExport = () => {
+  const handleExport = useCallback(() => {
     if (!quotes || quotes.length === 0) {
       toast.error("Aucune demande à exporter");
       return;
@@ -89,7 +73,7 @@ export default function AdminDashboard() {
     document.body.removeChild(link);
     
     toast.success("Fichier exporté avec succès");
-  };
+  }, [quotes]);
 
   if (isLoading) {
     return (
@@ -262,4 +246,25 @@ export default function AdminDashboard() {
       </div>
     </div>
   );
+}
+
+export default function AdminDashboard() {
+  const { user, isAuthenticated, loading } = useAuth();
+  const [, setLocation] = useLocation();
+
+  // Rediriger si non authentifié ou non admin
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="animate-spin w-8 h-8" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated || user?.role !== "admin") {
+    setLocation("/");
+    return null;
+  }
+
+  return <AdminDashboardContent />;
 }
