@@ -162,8 +162,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .flex {
@@ -173,16 +173,16 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1200px; /* Conteneur de 1200px max pour Industrial Minimalism */
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1280px; /* Conteneur de 1280px max pour Industrial Minimalism */
     }
   }
   

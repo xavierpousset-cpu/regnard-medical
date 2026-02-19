@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Shield, Heart, Users, Droplet, Award } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function OPrepDivan() {
   const [formData, setFormData] = useState({
@@ -53,8 +55,9 @@ export default function OPrepDivan() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Header />
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-background to-secondary">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -85,8 +88,42 @@ export default function OPrepDivan() {
         </div>
       </section>
 
-      {/* Product Description */}
+      {/* Product Image Section */}
       <section className="py-24 bg-background">
+        <div className="container">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/qX3Yq4fNJzKwL9mP2rS5tU.png"
+                alt="O-PREP DIVAN - Système complet de préparation coloscopique"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-4xl font-bold text-foreground mb-8">Une solution complète et professionnelle</h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                O-PREP®DIVAN est un système intégré conçu pour offrir une expérience de préparation coloscopique optimale, combinant sécurité, confort et efficacité.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Système automatisé et contrôlé",
+                  "Interface intuitive et ergonomique",
+                  "Protocoles de sécurité avancés",
+                  "Adaptabilité aux besoins spécifiques",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span className="text-foreground font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Description */}
+      <section className="py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
             <h2 className="text-4xl font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
@@ -367,6 +404,8 @@ export default function OPrepDivan() {
           </form>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

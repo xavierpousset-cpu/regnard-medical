@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Zap, Home, Users, Wrench, Award } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function OPrepAltesse() {
   const [formData, setFormData] = useState({
@@ -53,8 +55,9 @@ export default function OPrepAltesse() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Header />
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-background to-secondary">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -85,8 +88,42 @@ export default function OPrepAltesse() {
         </div>
       </section>
 
-      {/* Product Description */}
+      {/* Product Image Section */}
       <section className="py-24 bg-background">
+        <div className="container">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex-1">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mN8pQ2rT5uV3wX6yZ9aB1c.png"
+                alt="O-PREP ALTESSE - Solution légérée de préparation coloscopique"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-4xl font-bold text-foreground mb-8">Une solution légérée et accessible</h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                O-PREP®ALTESSE est une solution allégée et discrète conçue pour faciliter la préparation à la coloscopie en remplacçant simplement la cuvétte de WC traditionnelle.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Installation simple et rapide",
+                  "Remplacement direct de la cuvétte",
+                  "Discrétion et confort du patient",
+                  "Facilité d'utilisation pour les soignants",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span className="text-foreground font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Description */}
+      <section className="py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
             <h2 className="text-4xl font-bold text-foreground mb-8">Une solution légère et intégrée</h2>
@@ -367,6 +404,8 @@ export default function OPrepAltesse() {
           </form>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
