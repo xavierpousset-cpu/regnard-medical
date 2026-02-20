@@ -31,18 +31,21 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-3xl">
+          {/* Section number - Industrial Minimalism signature */}
+          <div className="section-number mb-8 text-white/60">01 — Accueil</div>
+
           {/* Main Title */}
           <h1 className="text-white mb-6 tracking-tight">
-            [Texte]
+            Expertise et Innovation au service du Médical
           </h1>
 
           {/* Subtitle */}
           <div className="mb-12">
             <p className="text-xl text-white/90 font-medium mb-2">
-              [Texte]
+              Réparation • Recherche • Développement
             </p>
             <p className="text-lg text-white/80">
-              [Texte]
+              Partenaire technique des établissements de santé
             </p>
           </div>
 
@@ -53,7 +56,7 @@ export default function HeroSection() {
               onClick={scrollToContact}
               className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 text-base font-medium px-8 py-6"
             >
-              [Texte]
+              Demander un diagnostic
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -62,7 +65,7 @@ export default function HeroSection() {
               onClick={scrollToContact}
               className="border-2 border-white text-white hover:bg-white hover:text-foreground transition-colors duration-150 text-base font-medium px-8 py-6 bg-transparent"
             >
-              [Texte]
+              Nous contacter
             </Button>
           </div>
         </div>

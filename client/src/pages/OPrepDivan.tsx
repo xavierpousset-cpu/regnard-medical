@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Shield, Heart, Users, Droplet, Award } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function OPrepDivan() {
   const [formData, setFormData] = useState({
@@ -31,17 +29,7 @@ export default function OPrepDivan() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validation basique
-    if (!formData.name || !formData.email || !formData.establishment) {
-      toast.error("Veuillez remplir tous les champs obligatoires");
-      return;
-    }
-    
-    // Simulation d'envoi
     toast.success("Votre demande de devis a été envoyée. Réponse sous 48h ouvrées.");
-    
-    // Reset form
     setFormData({
       name: "",
       function: "",
@@ -60,24 +48,23 @@ export default function OPrepDivan() {
   };
 
   const scrollToSurvey = () => {
-    window.location.href = "/questionnaire-ehpad";
+    window.open("https://tally.so/r/ZjN5py?transparentBackground=1", "_blank");
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
+      <section className="relative py-32 bg-gradient-to-br from-background to-secondary">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              O-PREP® DIVAN
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              O-PREP®DIVAN
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
-              Solution d'hydro-lavage colique haute performance
+              Optimiser la préparation coloscopique, en toute sécurité
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système complet d'irrigation du côlon par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
+              Une solution ergonomique pensée pour les patients fragiles et les équipes soignantes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -98,93 +85,17 @@ export default function OPrepDivan() {
         </div>
       </section>
 
-      {/* Product Image Section */}
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1">
-              <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/AjWtaixutMRRvwhz.png"
-                alt="O-PREP DIVAN - Système complet de préparation coloscopique"
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="flex-1">
-              <h2 className="font-bold text-foreground mb-8">Caractéristiques techniques</h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®DIVAN utilise un réservoir de 30,5 litres d'eau portée à 37°C, positionné à 90 cm au-dessus du bassin du patient. Par principe de gravité et à basse pression (0,7 PA), l'eau irrigue le côlon jusqu'au cæcum avec un débit moyen de 1,3 litres/minute.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Réservoir de 30,5 litres d'eau à 37°C",
-                  "Système de gravité à basse pression (0,7 PA)",
-                  "Débit moyen de 1,3 litres/minute",
-                  "Irrigation jusqu'au cæcum",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <span className="text-foreground font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Gallery */}
-      <section className="py-24 bg-background">
-        <div className="container">
-          <h2 className="font-bold text-foreground mb-16 text-center">
-            Le produit en préparation
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/rckyYSDxtkStRwPG.JPG"
-                alt="O-PREP DIVAN - Vue d'ensemble du système"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4 bg-secondary">
-                <p className="text-sm text-muted-foreground">Système complet avec interface de contrôle</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/jkVcvbGvPGKbvxTQ.JPG"
-                alt="O-PREP DIVAN - Installation en atelier"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4 bg-secondary">
-                <p className="text-sm text-muted-foreground">Installation et configuration du système</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/wsnAjuGFpScEqZaO.JPG"
-                alt="O-PREP DIVAN - Détail du bassin ergonomique"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4 bg-secondary">
-                <p className="text-sm text-muted-foreground">Bassin ergonomique et rampes de sécurité</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Product Description */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O-PREP®DIVAN est un dispositif ergonomique, pensé pour les environnements EHPAD et hospitaliers.
-Il améliore significativement la qualité des soins et la sécurité des patients.
+                O-PREP®DIVAN est un dispositif ergonomique conçu pour faciliter la préparation à la coloscopie, notamment chez les patients âgés ou à mobilité réduite. Pensé pour les environnements EHPAD et hospitaliers, il améliore significativement la qualité des soins et la sécurité des patients.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-6">Améliore :</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-6">Améliore :</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -215,7 +126,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Specific Benefits */}
       <section className="py-24 bg-secondary">
         <div className="container">
-          <h2 className="font-bold text-foreground mb-16">Bénéfices spécifiques pour EHPAD et gériatrie</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-16">Bénéfices spécifiques pour EHPAD et gériatrie</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -253,7 +164,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
               return (
                 <div key={index} className="bg-background p-8 rounded-lg border border-border hover:border-primary transition-colors duration-150">
                   <Icon className="h-8 w-8 text-primary mb-4" strokeWidth={1.5} />
-                  <h3 className="font-semibold text-foreground mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               );
@@ -265,7 +176,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Organizational Impact */}
       <section className="py-24 bg-background">
         <div className="container">
-          <h2 className="font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
             O-PREP®DIVAN contribue directement à l'amélioration de votre structure :
           </p>
@@ -288,7 +199,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Trust & Validation */}
       <section className="py-24 bg-secondary">
         <div className="container">
-          <h2 className="font-bold text-foreground mb-12">Confiance & Validation</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">Confiance & Validation</h2>
           <div className="max-w-3xl bg-background p-12 rounded-lg border-2 border-primary">
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Une innovation développée sur le terrain, validée par l'usage.
@@ -314,7 +225,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Survey Section */}
       <section className="py-24 bg-background">
         <div className="container max-w-3xl">
-          <h2 className="font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Nous menons une enquête auprès des établissements de santé et EHPAD afin d'adapter nos solutions aux réalités du terrain.
           </p>
@@ -330,7 +241,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Quote Form */}
       <section id="devis-form" className="py-24 bg-secondary">
         <div className="container max-w-2xl">
-          <h2 className="font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
           <form onSubmit={handleFormSubmit} className="space-y-6 bg-background p-8 rounded-lg border border-border">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -456,8 +367,6 @@ Il améliore significativement la qualité des soins et la sécurité des patien
           </form>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

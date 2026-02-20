@@ -11,9 +11,14 @@ export default function EhpadStudySection() {
   const [, navigate] = useLocation();
 
   return (
-    <section className="py-8 md:py-20 bg-background">
+    <section className="py-20 bg-background">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
+          {/* Numéro de section */}
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-6">
+            04 — Étude EHPAD
+          </p>
+
           {/* Titre principal */}
           <h2 className="text-4xl font-bold text-foreground mb-6 leading-tight">
             Directeur d'EHPAD? Participez à notre étude sur la prise en charge de l'inconfort digestif.

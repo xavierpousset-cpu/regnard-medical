@@ -56,11 +56,14 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-32 bg-background">
+    <section id="contact" className="py-32 bg-background">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left column - Info */}
           <div>
+            {/* Section number */}
+            <div className="section-number mb-8">06 — Contact</div>
+
             {/* Title */}
             <h2 className="mb-8">
               Parlons de votre projet

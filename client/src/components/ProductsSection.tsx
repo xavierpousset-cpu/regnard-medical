@@ -7,13 +7,11 @@
 
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
-import { useLocation } from "wouter";
 
 const products = [
   {
-    name: "O-PREP® DIVAN",
+    name: "O-PREP®DIVAN",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/PkszOBngDOpNWnXd.png",
-    link: "/oprep-divan",
     benefits: [
       "Ergonomie optimisée pour le praticien",
       "Fiabilité éprouvée en environnement hospitalier",
@@ -22,9 +20,8 @@ const products = [
     ],
   },
   {
-    name: "O-PREP® ALTESSE",
+    name: "O-PREP®ALTESSE",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mMtGbBrysgNynIbs.png",
-    link: "/oprep-altesse",
     benefits: [
       "Design innovant et fonctionnel",
       "Précision technique de pointe",
@@ -35,14 +32,20 @@ const products = [
 ];
 
 export default function ProductsSection() {
-  const [, navigate] = useLocation();
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section className="py-12 md:py-32 bg-secondary">
+    <section className="py-32 bg-secondary">
       <div className="container">
+        {/* Section number */}
+        <div className="section-number mb-8">03 — Solutions</div>
+
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          [Texte]
+          Des solutions techniques conçues pour l'excellence opérationnelle
         </h2>
 
         {/* Products */}
@@ -85,13 +88,10 @@ export default function ProductsSection() {
 
                 <Button
                   variant="outline"
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    navigate(product.link);
-                  }}
+                  onClick={scrollToContact}
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-150"
                 >
-                  [Texte]
+                  Découvrir nos solutions
                 </Button>
               </div>
             </div>

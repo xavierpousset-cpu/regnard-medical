@@ -30,11 +30,14 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="py-12 md:py-32 bg-background">
+    <section className="py-32 bg-background">
       <div className="container">
+        {/* Section number */}
+        <div className="section-number mb-8">04 — Valeurs</div>
+
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Nos engagements
+          Les fondations de notre engagement
         </h2>
 
         {/* Grid */}

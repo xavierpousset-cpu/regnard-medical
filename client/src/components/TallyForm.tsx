@@ -20,7 +20,7 @@ export default function TallyForm() {
   }, []);
 
   return (
-    <section className="py-8 md:py-20 bg-background">
+    <section className="py-20 bg-background">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           {/* Titre de la section */}
