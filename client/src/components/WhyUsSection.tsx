@@ -35,7 +35,7 @@ const differentiators = [
 
 export default function WhyUsSection() {
   return (
-    <section className="relative py-32 bg-secondary">
+    <section className="relative py-12 md:py-32 bg-secondary">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0 opacity-10">
         <img

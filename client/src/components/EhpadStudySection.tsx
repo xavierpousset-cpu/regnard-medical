@@ -11,7 +11,7 @@ export default function EhpadStudySection() {
   const [, navigate] = useLocation();
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-8 md:py-20 bg-background">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           {/* Titre principal */}
