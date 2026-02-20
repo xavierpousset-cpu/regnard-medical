@@ -294,7 +294,7 @@ function LanguageSelector() {
 
   return (
     <div className="relative group">
-      <div className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-2 cursor-pointer">
+      <div className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-150 flex items-center gap-2 cursor-pointer px-2 py-1 rounded hover:bg-secondary">
         {language === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
         <ChevronDown className="h-4 w-4" />
       </div>
