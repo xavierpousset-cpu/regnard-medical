@@ -1,0 +1,25 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user zhHLfqWd2MVM8vK.root --database emZFRNSoPdeUeWX5JnxLkg --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_emZFRNSoPdeUeWX5JnxLkg": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_emZFRNSoPdeUeWX5JnxLkg": "forumPosts"
+    },
+    {
+      "Tables_in_emZFRNSoPdeUeWX5JnxLkg": "forumTopics"
+    },
+    {
+      "Tables_in_emZFRNSoPdeUeWX5JnxLkg": "quoteRequests"
+    },
+    {
+      "Tables_in_emZFRNSoPdeUeWX5JnxLkg": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_emZFRNSoPdeUeWX5JnxLkg\n__drizzle_migrations\nforumPosts\nforumTopics\nquoteRequests\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

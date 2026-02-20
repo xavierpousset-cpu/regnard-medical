@@ -18,3 +18,14 @@
 - [ ] Section Témoignages clients
 - [x] Page FAQ avec questions sur maintenance et tarifs
 - [ ] Blog/Resources section
+
+## Bugs à Corriger
+- [x] B-01: Créer la page "Nos Services" (/nos-services) - EXISTE DÉJÀ
+- [x] B-02: Créer le Dashboard Admin (/dashboard) avec authentification - EXISTE DÉJÀ
+- [x] B-03: Corriger le lien "Nos services" dans Header.tsx - ROUTES CORRECTES
+- [x] B-04: Corriger le lien "Dashboard Admin" dans Header.tsx - ROUTES CORRECTES
+- [x] Tester les formulaires (contact, devis) pour vérifier la soumission - FONCTIONNELS
+- [x] Vérifier les appels API tRPC pour les formulaires - FONCTIONNELS
+- [x] Tester la base de données pour les enregistrements - DONNÉES ENREGISTRÉES
+- [x] Créer des tests vitest pour quotes.submit - 4 TESTS PASSENT
+- [x] Appliquer les migrations de la base de données - APPLIQUÉES

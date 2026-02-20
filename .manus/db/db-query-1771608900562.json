@@ -1,0 +1,23 @@
+{
+  "query": "SELECT * FROM quoteRequests;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user zhHLfqWd2MVM8vK.root --database emZFRNSoPdeUeWX5JnxLkg --execute SELECT * FROM quoteRequests;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Xavier Pousset",
+      "function": "Direction",
+      "establishment": "OPREP",
+      "structureType": "Autre",
+      "email": "xavier.pousset@gmail.com",
+      "phone": "0612121212",
+      "estimatedNeed": "Test",
+      "message": "frhgvfhrgf",
+      "createdAt": "2026-02-19 14:01:06",
+      "updatedAt": "2026-02-19 14:01:06"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tfunction\testablishment\tstructureType\temail\tphone\testimatedNeed\tmessage\tcreatedAt\tupdatedAt\n1\tXavier Pousset\tDirection\tOPREP\tAutre\txavier.pousset@gmail.com\t0612121212\tTest\tfrhgvfhrgf\t2026-02-19 14:01:06\t2026-02-19 14:01:06\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}
