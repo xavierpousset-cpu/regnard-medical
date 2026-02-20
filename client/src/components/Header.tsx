@@ -14,27 +14,28 @@ import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const navItems = [
-  {
-    label: "Nos produits",
-    href: "#",
-    isExternal: false,
-    submenu: [
-      { label: "O-PREP®DIVAN", href: "/oprep-divan" },
-      { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
-    ],
-  },
-  { label: "Nos services", href: "/services", isExternal: false },
-  { label: "Forum", href: "/forum", isExternal: false },
-  { label: "FAQ", href: "/faq", isExternal: false },
-  { label: "À propos", href: "/about", isExternal: false },
-];
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const { user, isAuthenticated, logout } = useAuth();
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
+
+  const navItems = [
+    {
+      labelKey: "header.products",
+      href: "#",
+      isExternal: false,
+      submenu: [
+        { label: "O-PREP®DIVAN", href: "/oprep-divan" },
+        { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
+      ],
+    },
+    { labelKey: "header.services", href: "/services", isExternal: false },
+    { labelKey: "header.forum", href: "/forum", isExternal: false },
+    { labelKey: "header.faq", href: "/faq", isExternal: false },
+    { labelKey: "header.about", href: "/about", isExternal: false },
+  ];
 
   const scrollToSection = (href: string) => {
     setMobileMenuOpen(false);
@@ -87,7 +88,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <div key={item.label} className="relative group">
+              <div key={item.labelKey} className="relative group">
                 <a
                   href={item.href}
                   onClick={(e) => {
@@ -100,7 +101,7 @@ export default function Header() {
                   }}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-1"
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                   {item.submenu && <ChevronDown className="h-4 w-4" />}
                 </a>
 
@@ -129,14 +130,14 @@ export default function Header() {
               onClick={handleContactClick}
               className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150"
             >
-              Contact
+              {t('header.contact')}
             </Button>
 
             {/* Account Menu */}
             {isAuthenticated && user ? (
               <div className="relative group">
                 <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-1">
-                  Mon compte
+                  {t('header.account')}
                   <ChevronDown className="h-4 w-4" />
                 </button>
                 <div className="absolute right-0 mt-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -148,7 +149,7 @@ export default function Header() {
                       href="/admin"
                       className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150"
                     >
-                      Dashboard Admin
+                      {t('header.admin_dashboard')}
                     </a>
                   )}
                   <button
@@ -159,7 +160,7 @@ export default function Header() {
                     className="w-full text-left px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 flex items-center gap-2 rounded-b-lg"
                   >
                     <LogOut className="h-4 w-4" />
-                    Déconnexion
+                    {t('header.logout')}
                   </button>
                 </div>
               </div>
@@ -169,7 +170,7 @@ export default function Header() {
                 variant="outline"
                 onClick={() => (window.location.href = getLoginUrl())}
               >
-                Connexion
+                {t('header.login')}
               </Button>
             )}
           </nav>
@@ -193,11 +194,11 @@ export default function Header() {
           <nav className="md:hidden py-6 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <div key={item.label}>
+                <div key={item.labelKey}>
                   <button
                     onClick={() => {
                       if (item.submenu) {
-                        setOpenSubmenu(openSubmenu === item.label ? null : item.label);
+                        setOpenSubmenu(openSubmenu === item.labelKey ? null : item.labelKey);
                       } else if (item.href.startsWith('#')) {
                         scrollToSection(item.href);
                       } else {
@@ -208,18 +209,18 @@ export default function Header() {
                     }}
                     className="w-full text-left text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center justify-between"
                   >
-                    {item.label}
+                    {t(item.labelKey)}
                     {item.submenu && (
                       <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${
-                          openSubmenu === item.label ? "rotate-180" : ""
+                          openSubmenu === item.labelKey ? "rotate-180" : ""
                         }`}
                       />
                     )}
                   </button>
 
                   {/* Mobile Submenu */}
-                  {item.submenu && openSubmenu === item.label && (
+                  {item.submenu && openSubmenu === item.labelKey && (
                     <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
                       {item.submenu.map((subitem) => (
                         <a
@@ -242,7 +243,7 @@ export default function Header() {
                 onClick={handleContactClick}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 w-full"
               >
-                Contact
+                {t('header.contact')}
               </Button>
 
               {/* Mobile Account Menu */}
@@ -257,7 +258,7 @@ export default function Header() {
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 rounded"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Dashboard Admin
+                      {t('header.admin_dashboard')}
                     </a>
                   )}
                   <button
@@ -269,7 +270,7 @@ export default function Header() {
                     className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 flex items-center gap-2 rounded"
                   >
                     <LogOut className="h-4 w-4" />
-                    Déconnexion
+                    {t('header.logout')}
                   </button>
                 </div>
               ) : (
@@ -278,7 +279,7 @@ export default function Header() {
                   onClick={() => (window.location.href = getLoginUrl())}
                   className="w-full"
                 >
-                  Connexion
+                  {t('header.login')}
                 </Button>
               )}
             </div>

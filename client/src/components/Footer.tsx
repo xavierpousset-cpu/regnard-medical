@@ -8,6 +8,23 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
+
+  const services = [
+    'footer.repair',
+    'footer.maintenance',
+    'footer.research',
+    'footer.engineering',
+    'footer.solutions',
+  ];
+
+  const expertise = [
+    'footer.medtech',
+    'footer.optimization',
+    'footer.compliance',
+    'footer.innovation',
+    'footer.partner',
+  ];
+
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container">
@@ -28,28 +45,24 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
-              Services
+              {t('footer.services')}
             </h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li>Réparation de dispositifs médicaux</li>
-              <li>Maintenance biomédicale</li>
-              <li>Recherche & Développement</li>
-              <li>Bureau d'études médical</li>
-              <li>Solutions techniques sur mesure</li>
+              {services.map((key) => (
+                <li key={key}>{t(key)}</li>
+              ))}
             </ul>
           </div>
 
           {/* Keywords for SEO */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
-              Expertise
+              {t('footer.expertise_title')}
             </h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li>MedTech France</li>
-              <li>Optimisation équipements hospitaliers</li>
-              <li>Conformité dispositifs médicaux</li>
-              <li>Innovation médicale</li>
-              <li>Partenaire établissements de santé</li>
+              {expertise.map((key) => (
+                <li key={key}>{t(key)}</li>
+              ))}
             </ul>
           </div>
         </div>
