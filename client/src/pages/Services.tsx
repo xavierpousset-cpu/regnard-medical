@@ -190,7 +190,7 @@ export default function Services() {
               return (
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
                   <div className="h-48 bg-slate-200 overflow-hidden">
-                    <img src={images[index]} alt={service.title} className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={images[index]} alt={service.title} className="w-full h-full object-cover" />
                   </div>
                   <CardHeader>
                     <div className="flex items-start gap-4">

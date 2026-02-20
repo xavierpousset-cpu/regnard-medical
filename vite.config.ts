@@ -167,6 +167,19 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    minify: "terser",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          trpc: ['@trpc/client', '@trpc/react-query'],
+          ui: ['lucide-react', 'sonner'],
+        },
+        entryFileNames: 'js/[name]-[hash].js',
+        chunkFileNames: 'js/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]',
+      },
+    },
   },
   server: {
     host: true,
@@ -183,5 +196,8 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+  },
+  ssr: {
+    external: ['express'],
   },
 });
