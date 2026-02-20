@@ -15,8 +15,8 @@ const getExpertiseItems = (t: (key: string) => string) => [
     title: t('expertise.repair'),
     items: [
       t('expertise.repair.desc'),
-      "Remise en conformité",
-      "Prolongation du cycle de vie",
+      t('expertise.repair.item2'),
+      t('expertise.repair.item3'),
     ],
   },
   {
@@ -24,8 +24,8 @@ const getExpertiseItems = (t: (key: string) => string) => [
     title: t('expertise.research'),
     items: [
       t('expertise.research.desc'),
-      "Prototypage",
-      "Optimisation fonctionnelle",
+      t('expertise.research.item2'),
+      t('expertise.research.item3'),
     ],
   },
   {
@@ -33,8 +33,8 @@ const getExpertiseItems = (t: (key: string) => string) => [
     title: t('expertise.studies'),
     items: [
       t('expertise.studies.desc'),
-      "Amélioration produit",
-      "Développement sur mesure",
+      t('expertise.studies.item2'),
+      t('expertise.studies.item3'),
     ],
   },
 ];

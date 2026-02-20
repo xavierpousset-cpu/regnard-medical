@@ -11,6 +11,7 @@ export const translations = {
     'header.logout': 'Déconnexion',
     'header.dashboard': 'Dashboard Admin',
     'header.account': 'Mon compte',
+    'header.admin_dashboard': 'Dashboard Admin',
 
     // ===== HERO SECTION =====
     'hero.title': 'Expertise et Innovation au service du Médical',
@@ -23,10 +24,16 @@ export const translations = {
     'expertise.title': 'Une expertise technique complète au service de vos équipements médicaux',
     'expertise.repair': 'Réparation',
     'expertise.repair.desc': 'Maintenance spécialisée',
+    'expertise.repair.item2': 'Remise en conformité',
+    'expertise.repair.item3': 'Prolongation du cycle de vie',
     'expertise.research': 'Recherche & Développement',
     'expertise.research.desc': 'Conception de solutions techniques',
+    'expertise.research.item2': 'Prototypage',
+    'expertise.research.item3': 'Optimisation fonctionnelle',
     'expertise.studies': 'Bureau d\'Études',
     'expertise.studies.desc': 'Analyse technique',
+    'expertise.studies.item2': 'Amélioration produit',
+    'expertise.studies.item3': 'Développement sur mesure',
 
     // ===== PRODUCTS SECTION =====
     'products.title': 'Nos solutions innovantes',
@@ -756,5 +763,42 @@ export const translations = {
     'oprep_altesse.form.estimated_need': 'Estimated Need',
     'oprep_altesse.form.message': 'Message',
     'oprep_altesse.form.submit': 'Send Request',
+
+    // ===== PRODUCTS SECTION - BENEFITS =====
+    'products.divan.benefit1': 'Ergonomie optimisée pour le praticien',
+    'products.divan.benefit2': 'Fiabilité éprouvée en environnement hospitalier',
+    'products.divan.benefit3': 'Optimisation des flux de travail',
+    'products.divan.benefit4': 'Confort patient amélioré',
+    'products.altesse.benefit1': 'Design innovant et fonctionnel',
+    'products.altesse.benefit2': 'Précision technique de pointe',
+    'products.altesse.benefit3': 'Maintenance simplifiée',
+    'products.altesse.benefit4': 'Intégration fluide dans les protocoles existants',
+
+    // ===== EHPAD STUDY SECTION =====
+    'ehpad.study.title': 'Directeur d\'EHPAD? Participez à notre étude sur la prise en charge de l\'inconfort digestif.',
+    'ehpad.study.description': 'Nous menons une étude sur la gestion des troubles du transit (constipation sévère, fécalomes). L\'objectif est de valider l\'apport de notre nouvelle solution d\'irrigation automatisée pour améliorer le confort des résidents et simplifier le travail des soignants.',
+    'ehpad.study.cta': 'Répondre au questionnaire',
+
+    // ===== VALUES SECTION =====
+    'values.commitments': 'Nos engagements',
+    'values.expertise': 'Expertise',
+    'values.expertise.description': 'Une maîtrise technique approfondie des dispositifs médicaux, acquise par des années d\'expérience terrain et une formation continue de nos équipes.',
+    'values.reliability': 'Fiabilité',
+    'values.reliability.description': 'Des processus rigoureux, des contrôles qualité systématiques et un engagement de résultat pour garantir la conformité et la sécurité de vos équipements.',
+
+    // ===== WHY US SECTION =====
+    'whyus.partner': 'Un partenaire technique de confiance pour vos dispositifs médicaux',
+    'whyus.expertise.title': 'Expertise technique terrain',
+    'whyus.expertise.description': 'Nos équipes interviennent directement sur site et maîtrisent les contraintes opérationnelles des établissements de santé.',
+    'whyus.longterm.title': 'Vision long terme',
+    'whyus.longterm.description': 'Nous accompagnons nos partenaires dans la durée, en assurant la pérennité et l\'évolution de leurs équipements médicaux.',
+    'whyus.mastery.title': 'Maîtrise des dispositifs médicaux',
+    'whyus.mastery.description': 'Une connaissance approfondie des normes, des réglementations et des exigences spécifiques au secteur médical.',
+    'whyus.rd.title': 'Capacité R&D interne',
+    'whyus.rd.description': 'Un bureau d\'études intégré capable de concevoir, prototyper et industrialiser des solutions techniques innovantes.',
+    'whyus.agile.title': 'Structure agile',
+    'whyus.agile.description': 'Une organisation réactive qui s\'adapte rapidement aux besoins spécifiques de chaque projet et de chaque partenaire.',
+
+    // ===== CONTACT SECTION =====
   }
 };

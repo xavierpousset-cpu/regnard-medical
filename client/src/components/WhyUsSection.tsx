@@ -5,35 +5,35 @@
  * - Image de fond avec overlay
  */
 
-const differentiators = [
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const getDifferentiators = (t: (key: string) => string) => [
   {
-    title: "Expertise technique terrain",
-    description:
-      "Nos équipes interviennent directement sur site et maîtrisent les contraintes opérationnelles des établissements de santé.",
+    title: t('whyus.expertise.title'),
+    description: t('whyus.expertise.description'),
   },
   {
-    title: "Vision long terme",
-    description:
-      "Nous accompagnons nos partenaires dans la durée, en assurant la pérennité et l'évolution de leurs équipements médicaux.",
+    title: t('whyus.longterm.title'),
+    description: t('whyus.longterm.description'),
   },
   {
-    title: "Maîtrise des dispositifs médicaux",
-    description:
-      "Une connaissance approfondie des normes, des réglementations et des exigences spécifiques au secteur médical.",
+    title: t('whyus.mastery.title'),
+    description: t('whyus.mastery.description'),
   },
   {
-    title: "Capacité R&D interne",
-    description:
-      "Un bureau d'études intégré capable de concevoir, prototyper et industrialiser des solutions techniques innovantes.",
+    title: t('whyus.rd.title'),
+    description: t('whyus.rd.description'),
   },
   {
-    title: "Structure agile",
-    description:
-      "Une organisation réactive qui s'adapte rapidement aux besoins spécifiques de chaque projet et de chaque partenaire.",
+    title: t('whyus.agile.title'),
+    description: t('whyus.agile.description'),
   },
 ];
 
 export default function WhyUsSection() {
+  const { t } = useLanguage();
+  const differentiators = getDifferentiators(t);
+
   return (
     <section className="relative py-12 md:py-32 bg-secondary">
       {/* Background image with overlay */}
@@ -49,7 +49,7 @@ export default function WhyUsSection() {
 
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Un partenaire technique de confiance pour vos dispositifs médicaux
+          {t('whyus.partner')}
         </h2>
 
         {/* Grid */}

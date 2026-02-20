@@ -10,16 +10,16 @@ import { CheckCircle2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const products = [
+const getProducts = (t: (key: string) => string) => [
   {
     name: "O-PREP® DIVAN",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/PkszOBngDOpNWnXd.png",
     link: "/oprep-divan",
     benefits: [
-      "Ergonomie optimisée pour le praticien",
-      "Fiabilité éprouvée en environnement hospitalier",
-      "Optimisation des flux de travail",
-      "Confort patient amélioré",
+      t('products.divan.benefit1'),
+      t('products.divan.benefit2'),
+      t('products.divan.benefit3'),
+      t('products.divan.benefit4'),
     ],
   },
   {
@@ -27,10 +27,10 @@ const products = [
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mMtGbBrysgNynIbs.png",
     link: "/oprep-altesse",
     benefits: [
-      "Design innovant et fonctionnel",
-      "Précision technique de pointe",
-      "Maintenance simplifiée",
-      "Intégration fluide dans les protocoles existants",
+      t('products.altesse.benefit1'),
+      t('products.altesse.benefit2'),
+      t('products.altesse.benefit3'),
+      t('products.altesse.benefit4'),
     ],
   },
 ];
@@ -38,6 +38,7 @@ const products = [
 export default function ProductsSection() {
   const [, navigate] = useLocation();
   const { t } = useLanguage();
+  const products = getProducts(t);
 
   return (
     <section className="py-12 md:py-32 bg-secondary">
