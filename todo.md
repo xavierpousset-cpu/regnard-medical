@@ -29,3 +29,4 @@
 - [x] Tester la base de données pour les enregistrements - DONNÉES ENREGISTRÉES
 - [x] Créer des tests vitest pour quotes.submit - 4 TESTS PASSENT
 - [x] Appliquer les migrations de la base de données - APPLIQUÉES
+- [x] B-05: Corriger l'erreur "Unable to find tRPC Context" dans Header - CORRIGÉE

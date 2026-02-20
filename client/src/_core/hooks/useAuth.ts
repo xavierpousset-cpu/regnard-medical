@@ -11,12 +11,27 @@ type UseAuthOptions = {
 export function useAuth(options?: UseAuthOptions) {
   const { redirectOnUnauthenticated = false, redirectPath = getLoginUrl() } =
     options ?? {};
-  const utils = trpc.useUtils();
-
-  const meQuery = trpc.auth.me.useQuery(undefined, {
-    retry: false,
-    refetchOnWindowFocus: false,
-  });
+  
+  let utils: any;
+  let meQuery: any;
+  
+  try {
+    utils = trpc.useUtils();
+    meQuery = trpc.auth.me.useQuery(undefined, {
+      retry: false,
+      refetchOnWindowFocus: false,
+    });
+  } catch (error) {
+    // If tRPC context is not available, return default values
+    return {
+      user: null,
+      loading: false,
+      error: null,
+      isAuthenticated: false,
+      refresh: () => Promise.resolve(),
+      logout: () => Promise.resolve(),
+    };
+  }
 
   const logoutMutation = trpc.auth.logout.useMutation({
     onSuccess: () => {
