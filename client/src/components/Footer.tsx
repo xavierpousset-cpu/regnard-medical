@@ -8,23 +8,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
-  
-  const services = [
-    t('footer.repair'),
-    t('footer.maintenance'),
-    t('footer.research'),
-    t('footer.engineering'),
-    t('footer.solutions'),
-  ];
-
-  const expertise = [
-    t('footer.medtech'),
-    t('footer.optimization'),
-    t('footer.compliance'),
-    t('footer.innovation'),
-    t('footer.partner'),
-  ];
-
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container">
@@ -45,24 +28,28 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
-              {t('footer.services')}
+              Services
             </h4>
             <ul className="space-y-2 text-sm text-background/70">
-              {services.map((service, index) => (
-                <li key={index}>{service}</li>
-              ))}
+              <li>Réparation de dispositifs médicaux</li>
+              <li>Maintenance biomédicale</li>
+              <li>Recherche & Développement</li>
+              <li>Bureau d'études médical</li>
+              <li>Solutions techniques sur mesure</li>
             </ul>
           </div>
 
           {/* Keywords for SEO */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4 text-background/90">
-              {t('footer.expertise_title')}
+              Expertise
             </h4>
             <ul className="space-y-2 text-sm text-background/70">
-              {expertise.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
+              <li>MedTech France</li>
+              <li>Optimisation équipements hospitaliers</li>
+              <li>Conformité dispositifs médicaux</li>
+              <li>Innovation médicale</li>
+              <li>Partenaire établissements de santé</li>
             </ul>
           </div>
         </div>
