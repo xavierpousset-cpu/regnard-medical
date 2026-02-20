@@ -179,8 +179,8 @@
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
       max-width: 1280px; /* Conteneur de 1280px max pour Industrial Minimalism */
     }
   }
