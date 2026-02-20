@@ -10,13 +10,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Wrench,
-      title: "Réparation de lits médicalisés",
-      description: "Diagnostic et réparation complète des équipements critiques",
+      title: t('services.repair_beds'),
+      description: t('services.repair_beds.desc'),
       details: [
         "Diagnostic mécanique et électrique",
         "Remplacement de vérins, moteurs, commandes",
@@ -32,8 +34,8 @@ export default function Services() {
     },
     {
       icon: Zap,
-      title: "Maintenance préventive",
-      description: "Anticipation des pannes par interventions régulières",
+      title: t('services.preventive'),
+      description: t('services.preventive.desc'),
       details: [
         "Planification d'interventions régulières",
         "Contrôle des systèmes électriques",
@@ -48,8 +50,8 @@ export default function Services() {
     },
     {
       icon: Stethoscope,
-      title: "Expertise technique & diagnostic",
-      description: "Analyse approfondie et recommandations stratégiques",
+      title: t('services.expertise'),
+      description: t('services.expertise.desc'),
       details: [
         "Analyse des dysfonctionnements complexes",
         "Évaluation de l'état du parc matériel",
@@ -64,8 +66,8 @@ export default function Services() {
     },
     {
       icon: Truck,
-      title: "Intervention sur site",
-      description: "Déploiement rapide et discret chez vos établissements",
+      title: t('services.onsite'),
+      description: t('services.onsite.desc'),
       details: [
         "Déplacement rapide et réactif",
         "Intervention en chambre ou atelier",

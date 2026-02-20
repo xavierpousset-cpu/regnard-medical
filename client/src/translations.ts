@@ -75,10 +75,8 @@ export const translations = {
 
     // ===== SERVICES PAGE =====
     'services.title': 'Nos services techniques et d\'innovation',
-    'services.maintenance': 'Maintenance',
-    'services.maintenance.desc': 'Maintenance spécialisée et préventive',
     'services.repair': 'Réparation',
-    'services.repair.desc': 'Diagnostic et réparation d\'équipements médicaux',
+    'services.repair.desc': 'Diagnostic et réparation d\'equipements médicaux',
     'services.development': 'Développement',
     'services.development.desc': 'Conception et développement de solutions innovantes',
 
@@ -115,13 +113,66 @@ export const translations = {
 
     // ===== FORUM PAGE =====
     'forum.title': 'Forum',
-    'forum.description': 'Échangez avec d\'autres professionnels de santé',
+    'forum.description': 'Échangez avec d\'autres professionnels de santé et partagez vos expériences',
 
     // ===== FOOTER =====
     'footer.legal': 'Mentions légales',
     'footer.privacy': 'Politique de confidentialité',
     'footer.company': 'Regnard Medical',
     'footer.copyright': '© 2024 Regnard Medical. Tous droits réservés.',
+
+    // ===== SERVICES PAGE DETAILS =====
+    'services.repair_beds': 'Réparation de lits médicalisés',
+    'services.repair_beds.desc': 'Diagnostic et réparation complète des équipements critiques',
+    'services.preventive': 'Maintenance préventive',
+    'services.preventive.desc': 'Anticipation des pannes par interventions régulières',
+    'services.expertise': 'Expertise technique & diagnostic',
+    'services.expertise.desc': 'Analyse approfondie et recommandations stratégiques',
+    'services.onsite': 'Intervention sur site',
+    'services.onsite.desc': 'Déploiement rapide et discret chez vos établissements',
+    'services.benefits': 'Avantages clés',
+    'services.patient_safety': 'Sécurité des patients',
+    'services.care_continuity': 'Continuité des soins',
+    'services.cost_reduction': 'Réduction des coûts',
+    'services.responsiveness': 'Réactivité',
+    'services.expertise_field': 'Expertise terrain',
+    'services.industries': 'Secteurs d\'activité',
+
+    // ===== OPREP DIVAN DETAILS =====
+    'oprep_divan.features': 'Caractéristiques principales :',
+    'oprep_divan.benefits': 'Bénéfices spécifiques',
+    'oprep_divan.organizational_impact': 'Impact organisationnel',
+    'oprep_divan.specific_benefits': 'Bénéfices spécifiques :',
+    'oprep_divan.quote': 'Demander un devis',
+    'oprep_divan.product_prep': 'Le produit en préparation',
+
+    // ===== OPREP ALTESSE DETAILS =====
+    'oprep_altesse.lightweight': 'Une solution légère et intégrée',
+    'oprep_altesse.benefits': 'Bénéfices spécifiques',
+    'oprep_altesse.organizational_impact': 'Impact organisationnel',
+    'oprep_altesse.quote': 'Demander un devis',
+    'oprep_altesse.product_prep': 'Le produit en préparation',
+
+    // ===== FAQ DETAILS =====
+    'faq.search': 'Rechercher...',
+    'faq.no_results': 'Aucune question trouvée',
+
+    // ===== ABOUT DETAILS =====
+    'about.story.title': 'Notre histoire',
+    'about.genesis': 'La genèse d\'O-PREP®DIVAN',
+    'about.dna.title': 'Notre ADN',
+    'about.vision.title': 'Notre vision',
+    'about.commitment': 'Notre engagement',
+    'about.cta': 'Nous contacter',
+
+    // ===== CONTACT PAGE =====
+    'contact_page.title': 'Nous contacter',
+    'contact_page.description': 'Envoyez-nous votre demande ou appelez-nous directement',
+    'contact_page.form_title': 'Formulaire de contact',
+    'contact_page.info_title': 'Informations de contact',
+
+    // ===== FORUM PAGE DETAILS =====
+    'forum.coming_soon': 'Le forum sera bientôt disponible',
 
     // ===== COMMON =====
     'common.loading': 'Chargement...',
@@ -245,7 +296,7 @@ export const translations = {
 
     // ===== FORUM PAGE =====
     'forum.title': 'Forum',
-    'forum.description': 'Connect with other healthcare professionals',
+    'forum.description': 'Connect with other healthcare professionals and share your experiences',
 
     // ===== FOOTER =====
     'footer.legal': 'Legal Notice',
@@ -253,10 +304,63 @@ export const translations = {
     'footer.company': 'Regnard Medical',
     'footer.copyright': '© 2024 Regnard Medical. All rights reserved.',
 
+    // ===== SERVICES PAGE DETAILS =====
+    'services.repair_beds': 'Repair of Medical Beds',
+    'services.repair_beds.desc': 'Complete diagnosis and repair of critical equipment',
+    'services.preventive': 'Preventive Maintenance',
+    'services.preventive.desc': 'Anticipating failures through regular interventions',
+    'services.expertise': 'Technical Expertise & Diagnosis',
+    'services.expertise.desc': 'In-depth analysis and strategic recommendations',
+    'services.onsite': 'On-Site Intervention',
+    'services.onsite.desc': 'Quick and discreet deployment at your facilities',
+    'services.benefits': 'Key Benefits',
+    'services.patient_safety': 'Patient Safety',
+    'services.care_continuity': 'Care Continuity',
+    'services.cost_reduction': 'Cost Reduction',
+    'services.responsiveness': 'Responsiveness',
+    'services.expertise_field': 'Field Expertise',
+    'services.industries': 'Industries Served',
+
+    // ===== OPREP DIVAN DETAILS =====
+    'oprep_divan.features': 'Main Features:',
+    'oprep_divan.benefits': 'Specific Benefits',
+    'oprep_divan.organizational_impact': 'Organizational Impact',
+    'oprep_divan.specific_benefits': 'Specific Benefits:',
+    'oprep_divan.quote': 'Request a Quote',
+    'oprep_divan.product_prep': 'Product in Preparation',
+
+    // ===== OPREP ALTESSE DETAILS =====
+    'oprep_altesse.lightweight': 'A Lightweight and Integrated Solution',
+    'oprep_altesse.benefits': 'Specific Benefits',
+    'oprep_altesse.organizational_impact': 'Organizational Impact',
+    'oprep_altesse.quote': 'Request a Quote',
+    'oprep_altesse.product_prep': 'Product in Preparation',
+
+    // ===== FAQ DETAILS =====
+    'faq.search': 'Search...',
+    'faq.no_results': 'No questions found',
+
+    // ===== ABOUT DETAILS =====
+    'about.story.title': 'Our Story',
+    'about.genesis': 'The Genesis of O-PREP®DIVAN',
+    'about.dna.title': 'Our DNA',
+    'about.vision.title': 'Our Vision',
+    'about.commitment': 'Our Commitment',
+    'about.cta': 'Contact Us',
+
+    // ===== CONTACT PAGE =====
+    'contact_page.title': 'Contact Us',
+    'contact_page.description': 'Send us your request or call us directly',
+    'contact_page.form_title': 'Contact Form',
+    'contact_page.info_title': 'Contact Information',
+
+    // ===== FORUM PAGE DETAILS =====
+    'forum.coming_soon': 'The forum will be available soon',
+
     // ===== COMMON =====
     'common.loading': 'Loading...',
     'common.error': 'An error occurred',
     'common.success': 'Success',
     'common.close': 'Close',
-  },
+  }
 };

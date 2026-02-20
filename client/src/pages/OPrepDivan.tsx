@@ -12,8 +12,10 @@ import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { trpc } from "@/lib/trpc";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function OPrepDivan() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     function: "",
@@ -37,7 +39,7 @@ export default function OPrepDivan() {
     
     try {
       await submitQuote.mutateAsync(formData);
-      toast.success("Votre demande de devis a été envoyée. Réponse sous 48h ouvrées.");
+      toast.success(t('common.success'));
       setFormData({
         name: "",
         function: "",
