@@ -128,7 +128,7 @@ export default function Services() {
                 </Button>
               </Link>
               <Link href="/questionnaire">
-                <Button size="lg" variant="outline" className="gap-2">
+                <Button size="lg" variant="outline" className="gap-2" style={{color: '#f8f8f7'}}>
                   Obtenir un diagnostic <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
