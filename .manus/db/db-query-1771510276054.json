@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, openId, name, email, role FROM users;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user zhHLfqWd2MVM8vK.root --database emZFRNSoPdeUeWX5JnxLkg --execute SELECT id, openId, name, email, role FROM users;",
+  "rows": [
+    {
+      "id": "1",
+      "openId": "E235ijMtTY54zE2g4RGvyL",
+      "name": "Xavier Pousset",
+      "email": "xavier.pousset@gmail.com",
+      "role": "admin"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\topenId\tname\temail\trole\n1\tE235ijMtTY54zE2g4RGvyL\tXavier Pousset\txavier.pousset@gmail.com\tadmin\n",
+  "stderr": "",
+  "execution_time_ms": 154
+}

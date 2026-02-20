@@ -6,32 +6,32 @@
  * - Espacement généreux
  */
 
-import { Wrench, FlaskConical, Ruler } from "lucide-react";
+import { Zap, Cog, Ruler } from "lucide-react";
 
-const expertiseItems = [
+const getExpertiseItems = () => [
   {
-    icon: Wrench,
-    title: "Réparation",
+    icon: Zap,
+    title: "Innovation",
     items: [
-      "Maintenance spécialisée",
-      "Remise en conformité",
-      "Prolongation du cycle de vie",
+      "Conception innovante",
+      "Conception innovante",
+      "Prototypage rapide",
     ],
   },
   {
-    icon: FlaskConical,
-    title: "Recherche & Développement",
+    icon: Cog,
+    title: "Fabrication",
     items: [
-      "Conception de solutions techniques",
-      "Prototypage",
-      "Optimisation fonctionnelle",
+      "Expertise en fabrication",
+      "Optimisation des procédés",
+      "Contrôle qualité",
     ],
   },
   {
     icon: Ruler,
-    title: "Bureau d'Études",
+    title: "Études",
     items: [
-      "Analyse technique",
+      "Études techniques",
       "Amélioration produit",
       "Développement sur mesure",
     ],
@@ -39,15 +39,14 @@ const expertiseItems = [
 ];
 
 export default function ExpertiseSection() {
+  const expertiseItems = getExpertiseItems();
+  
   return (
-    <section className="py-32 bg-background">
+    <section className="py-12 md:py-32 bg-background">
       <div className="container">
-        {/* Section number */}
-        <div className="section-number mb-8">02 — Expertise</div>
-
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Une expertise technique complète au service de vos équipements médicaux
+          [Texte]
         </h2>
 
         {/* Grid */}
