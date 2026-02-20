@@ -4,8 +4,10 @@
  * - Footer sobre avec informations essentielles
  */
 
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container">
@@ -16,7 +18,7 @@ export default function Footer() {
               REGNARD MEDICAL
             </h3>
             <p className="text-sm text-background/70 leading-relaxed mb-4">
-              [Texte]
+              {t('hero.title')}
             </p>
             <p className="text-xs text-background/60">
               Division de <a href="https://www.regnardtechnologie.com/" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors duration-150 underline">Regnard Technologie</a>
@@ -56,14 +58,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-background/60">
-              © {new Date().getFullYear()} [Texte]. [Texte]
+              © {new Date().getFullYear()} {t('footer.company')}. {t('footer.copyright')}
             </p>
             <div className="flex gap-6 text-sm text-background/60">
               <a href="/mentions-legales" className="hover:text-background transition-colors duration-150">
-                [Texte]
+                {t('footer.legal')}
               </a>
               <a href="/politique-confidentialite" className="hover:text-background transition-colors duration-150">
-                [Texte]
+                {t('footer.privacy')}
               </a>
             </div>
           </div>

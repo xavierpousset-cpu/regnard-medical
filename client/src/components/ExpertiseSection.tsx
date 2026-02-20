@@ -6,32 +6,33 @@
  * - Espacement généreux
  */
 
-import { Zap, Cog, Ruler } from "lucide-react";
+import { Wrench, FlaskConical, Ruler } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const getExpertiseItems = () => [
+const getExpertiseItems = (t: (key: string) => string) => [
   {
-    icon: Zap,
-    title: "Innovation",
+    icon: Wrench,
+    title: t('expertise.repair'),
     items: [
-      "Conception innovante",
-      "Conception innovante",
-      "Prototypage rapide",
+      t('expertise.repair.desc'),
+      "Remise en conformité",
+      "Prolongation du cycle de vie",
     ],
   },
   {
-    icon: Cog,
-    title: "Fabrication",
+    icon: FlaskConical,
+    title: t('expertise.research'),
     items: [
-      "Expertise en fabrication",
-      "Optimisation des procédés",
-      "Contrôle qualité",
+      t('expertise.research.desc'),
+      "Prototypage",
+      "Optimisation fonctionnelle",
     ],
   },
   {
     icon: Ruler,
-    title: "Études",
+    title: t('expertise.studies'),
     items: [
-      "Études techniques",
+      t('expertise.studies.desc'),
       "Amélioration produit",
       "Développement sur mesure",
     ],
@@ -39,14 +40,15 @@ const getExpertiseItems = () => [
 ];
 
 export default function ExpertiseSection() {
-  const expertiseItems = getExpertiseItems();
+  const { t } = useLanguage();
+  const expertiseItems = getExpertiseItems(t);
   
   return (
     <section className="py-12 md:py-32 bg-background">
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          [Texte]
+          {t('expertise.title')}
         </h2>
 
         {/* Grid */}

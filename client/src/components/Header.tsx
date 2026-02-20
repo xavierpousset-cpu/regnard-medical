@@ -9,9 +9,10 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-
+import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
+
 
 const navItems = [
   {
@@ -32,9 +33,7 @@ const navItems = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  // Auth disabled - using simple login URL instead
-  const isAuthenticated = false;
-  const user = null;
+  const { user, isAuthenticated, logout } = useAuth();
   const [, setLocation] = useLocation();
 
   const scrollToSection = (href: string) => {
@@ -122,8 +121,7 @@ export default function Header() {
                 )}
               </div>
             ))}
-            {/* Language Selector */}
-            <LanguageSelector />
+
 
             <Button
               size="sm"
@@ -290,37 +288,3 @@ export default function Header() {
   );
 }
 
-function LanguageSelector() {
-  const [language, setLanguage] = useState('fr');
-
-  return (
-    <div className="relative group">
-      <div className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-150 flex items-center gap-2 cursor-pointer px-2 py-1 rounded hover:bg-secondary">
-        {language === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
-        <ChevronDown className="h-4 w-4" />
-      </div>
-      <div className="absolute right-0 mt-0 w-32 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <button
-          onClick={() => setLanguage('fr')}
-          className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 ${
-            language === 'fr'
-              ? 'bg-secondary text-foreground font-medium'
-              : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-          } first:rounded-t-lg`}
-        >
-          🇫🇷 Français
-        </button>
-        <button
-          onClick={() => setLanguage('en')}
-          className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 ${
-            language === 'en'
-              ? 'bg-secondary text-foreground font-medium'
-              : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-          } last:rounded-b-lg`}
-        >
-          🇬🇧 English
-        </button>
-      </div>
-    </div>
-  );
-}
