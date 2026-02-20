@@ -60,7 +60,7 @@ export default function OPrepAltesse() {
   };
 
   const scrollToSurvey = () => {
-    window.location.href = "/regnard-technologie";
+    window.location.href = "/questionnaire-ehpad";
   };
 
   return (

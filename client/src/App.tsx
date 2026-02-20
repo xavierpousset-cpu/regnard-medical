@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import LegalNotice from "./pages/LegalNotice";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Questionnaire from "./pages/Questionnaire";
+import QuestionnaireEHPAD from "./pages/QuestionnaireEHPAD";
 import OPrepDivan from "./pages/OPrepDivan";
 import OPrepAltesse from "./pages/OPrepAltesse";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -22,7 +22,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/regnard-technologie"} component={Questionnaire} />
+      <Route path={"/questionnaire-ehpad"} component={QuestionnaireEHPAD} />
       <Route path={"/oprep-divan"} component={OPrepDivan} />
       <Route path={"/oprep-altesse"} component={OPrepAltesse} />
       <Route path={"/admin"} component={AdminDashboard} />
