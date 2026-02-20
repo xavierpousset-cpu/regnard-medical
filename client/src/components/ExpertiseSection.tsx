@@ -6,32 +6,32 @@
  * - Espacement généreux
  */
 
-import { Wrench, FlaskConical, Ruler } from "lucide-react";
+import { Zap, Cog, Ruler } from "lucide-react";
 
-const getExpertiseItems = (t: (key: string) => string) => [
+const getExpertiseItems = () => [
   {
-    icon: Wrench,
-    title: t('expertise.repair'),
+    icon: Zap,
+    title: "Innovation",
     items: [
-      t('expertise.repair.desc'),
-      "Remise en conformité",
-      "Prolongation du cycle de vie",
+      "Conception innovante",
+      "Conception innovante",
+      "Prototypage rapide",
     ],
   },
   {
-    icon: FlaskConical,
-    title: t('expertise.research'),
+    icon: Cog,
+    title: "Fabrication",
     items: [
-      t('expertise.research.desc'),
-      "Prototypage",
-      "Optimisation fonctionnelle",
+      "Expertise en fabrication",
+      "Optimisation des procédés",
+      "Contrôle qualité",
     ],
   },
   {
     icon: Ruler,
-    title: t('expertise.studies'),
+    title: "Études",
     items: [
-      t('expertise.studies.desc'),
+      "Études techniques",
       "Amélioration produit",
       "Développement sur mesure",
     ],
@@ -39,7 +39,7 @@ const getExpertiseItems = (t: (key: string) => string) => [
 ];
 
 export default function ExpertiseSection() {
-  const expertiseItems = getExpertiseItems(t);
+  const expertiseItems = getExpertiseItems();
   
   return (
     <section className="py-12 md:py-32 bg-background">
