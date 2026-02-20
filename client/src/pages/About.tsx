@@ -9,49 +9,47 @@ import { CheckCircle2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLocation } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function About() {
   const [, setLocation] = useLocation();
-  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-24 bg-gradient-to-b from-secondary to-background">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-white mb-6">
-                {t('about.hero.title')}
+                Une expertise industrielle au service du soin
               </h1>
               <p className="text-xl text-white/80 leading-relaxed">
-                {t('about.hero.subtitle')}
+                L'alliance de la précision technique et de l'expérience médicale.
               </p>
             </div>
           </div>
         </section>
 
         {/* L'Histoire Section */}
-        <section className="py-8 md:py-20 bg-background">
+        <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
-                {t('about.story.heading')}
+                L'histoire
               </h2>
 
               <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  {t('about.story.p1')}
+                  Regnard Medical trouve son origine dans l'expertise industrielle développée par Patrice Regnard, fondateur de Regnard Technologie. Depuis plusieurs années, Regnard Technologie intervient dans des environnements techniques exigeants, avec une culture forte de la précision, de la fiabilité et de la résolution de problématiques complexes.
                 </p>
 
                 <p>
-                  {t('about.story.p2')}
+                  C'est dans cette dynamique que Patrice Regnard rencontre le Dr Christian Lhirondel, gastroentérologue confronté aux réalités quotidiennes des pratiques d'endoscopie et des contraintes de préparation coloscopique. De cette rencontre naît une collaboration naturelle : une vision terrain médicale alliée à une capacité d'ingénierie et de conception industrielle.
                 </p>
 
                 <p className="font-semibold text-foreground">
-                  {t('about.story.p3')}
+                  Objectif commun : améliorer les conditions de préparation et la prise en charge des patients.
                 </p>
               </div>
             </div>
@@ -59,20 +57,20 @@ export default function About() {
         </section>
 
         {/* La Genèse d'O-PREP®DIVAN Section */}
-        <section className="py-8 md:py-20 bg-secondary/5">
+        <section className="py-20 bg-secondary/5">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
-                {t('about.genesis.heading')}
+                La genèse d'O-PREP®DIVAN
               </h2>
 
               <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  {t('about.genesis.p1')}
+                  O-PREP®DIVAN est le fruit d'un travail collaboratif entre pratique clinique et ingénierie technique. À partir des besoins identifiés en service d'endoscopie et en gérontologie, la solution a été conçue pour sécuriser les phases préparatoires, améliorer l'ergonomie pour les soignants et renforcer le confort et la stabilité des patients.
                 </p>
 
                 <p>
-                  {t('about.genesis.p2')}
+                  Le développement s'est appuyé sur un processus rigoureux : prototypage, tests terrain, ajustements techniques et retours d'expérience clinique. Chaque itération a intégré les observations des professionnels de santé pour aboutir à une solution réellement adaptée aux réalités hospitalières.
                 </p>
               </div>
             </div>
@@ -80,11 +78,11 @@ export default function About() {
         </section>
 
         {/* Notre ADN Section */}
-        <section className="py-8 md:py-20 bg-background">
+        <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-16">
-                {t('about.dna.heading')}
+                Notre ADN
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -93,11 +91,11 @@ export default function About() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <h3 className="text-foreground font-semibold">
-                      {t('about.dna.rigor')}
+                      Rigueur industrielle
                     </h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('about.dna.rigor.desc')}
+                    Maîtrise mécanique, précision, durabilité. Des solutions conçues pour fonctionner dans les environnements les plus exigeants.
                   </p>
                 </div>
 
@@ -106,11 +104,11 @@ export default function About() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <h3 className="text-foreground font-semibold">
-                      {t('about.dna.collaboration')}
+                      Collaboration médicale
                     </h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('about.dna.collaboration.desc')}
+                    Développement en lien direct avec les professionnels de santé. Chaque innovation est validée sur le terrain.
                   </p>
                 </div>
 
@@ -119,11 +117,11 @@ export default function About() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <h3 className="text-foreground font-semibold">
-                      {t('about.dna.innovation')}
+                      Innovation utile
                     </h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('about.dna.innovation.desc')}
+                    Des solutions concrètes, pensées pour le terrain. Pas de gadget, mais des réponses aux vrais besoins.
                   </p>
                 </div>
               </div>
@@ -132,41 +130,41 @@ export default function About() {
         </section>
 
         {/* Vision & Engagement Section */}
-        <section className="py-8 md:py-20 bg-secondary/5">
+        <section className="py-20 bg-secondary/5">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
-                {t('about.vision.heading')}
+                Vision et engagement
               </h2>
 
               <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  {t('about.vision.p1')}
+                  Nous croyons que l'innovation médicale doit être pragmatique, utile et sécurisée. Regnard Medical s'engage à développer des solutions fiables, durables et adaptées aux réalités hospitalières, conformes aux exigences réglementaires les plus strictes.
                 </p>
 
                 <div className="space-y-4 pt-4">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <p className="text-foreground font-medium">
-                      {t('about.vision.reliability')}
+                      Fiabilité : des solutions testées et éprouvées en environnement réel
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <p className="text-foreground font-medium">
-                      {t('about.vision.durability')}
+                      Durabilité : des produits conçus pour durer et accompagner l'évolution des pratiques
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <p className="text-foreground font-medium">
-                      {t('about.vision.compliance')}
+                      Conformité : respect des exigences réglementaires et normes de qualité
                     </p>
                   </div>
                 </div>
 
                 <p className="pt-8 font-semibold text-foreground">
-                  {t('about.vision.ambition')}
+                  Notre ambition : devenir un partenaire technique reconnu des établissements de santé.
                 </p>
               </div>
             </div>
@@ -174,11 +172,11 @@ export default function About() {
         </section>
 
         {/* Ancrage & Fabrication Section */}
-        <section className="py-8 md:py-20 bg-background">
+        <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
-                {t('about.manufacturing.heading')}
+                Ancrage et fabrication
               </h2>
 
               <div className="bg-secondary border border-border rounded-lg p-8 space-y-6">
@@ -186,10 +184,10 @@ export default function About() {
                   <div className="w-1 h-12 bg-primary rounded-full"></div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-2">
-                      {t('about.manufacturing.design')}
+                      Conception française
                     </h3>
                     <p className="text-muted-foreground">
-                      {t('about.manufacturing.design.desc')}
+                      Nos solutions sont développées en France, par une équipe qui connaît les réalités du terrain médical français.
                     </p>
                   </div>
                 </div>
@@ -198,10 +196,10 @@ export default function About() {
                   <div className="w-1 h-12 bg-primary rounded-full"></div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-2">
-                      {t('about.manufacturing.development')}
+                      Développement interne
                     </h3>
                     <p className="text-muted-foreground">
-                      {t('about.manufacturing.development.desc')}
+                      Maîtrise complète de la chaîne de conception et de production, garantissant qualité et réactivité.
                     </p>
                   </div>
                 </div>
@@ -210,10 +208,10 @@ export default function About() {
                   <div className="w-1 h-12 bg-primary rounded-full"></div>
                   <div>
                     <h3 className="text-foreground font-semibold mb-2">
-                      {t('about.manufacturing.vision')}
+                      Vision long terme
                     </h3>
                     <p className="text-muted-foreground">
-                      {t('about.manufacturing.vision.desc')}
+                      Nous investissons pour la durabilité et l'amélioration continue, pas pour des résultats court-termistes.
                     </p>
                   </div>
                 </div>
@@ -223,21 +221,21 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-8 md:py-20 bg-secondary">
+        <section className="py-20 bg-secondary">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-white mb-6">
-                {t('about.cta.heading')}
+                Parlons de votre projet
               </h2>
               <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                {t('about.cta.description')}
+                Vous avez une problématique en endoscopie, gérontologie ou préparation coloscopique ? Découvrez comment nos solutions peuvent améliorer votre pratique.
               </p>
               <Button
                 size="lg"
                 onClick={() => window.location.href = '/contact'}
                 className="bg-white text-secondary hover:bg-white/90 transition-colors duration-150 font-medium"
               >
-                {t('about.cta.button')}
+                Nous contacter
               </Button>
             </div>
           </div>

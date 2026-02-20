@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Composant EhpadStudySection
@@ -10,7 +9,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
  */
 export default function EhpadStudySection() {
   const [, navigate] = useLocation();
-  const { t } = useLanguage();
 
   return (
     <section className="py-8 md:py-20 bg-background">
@@ -18,12 +16,12 @@ export default function EhpadStudySection() {
         <div className="max-w-3xl mx-auto text-center">
           {/* Titre principal */}
           <h2 className="text-4xl font-bold text-foreground mb-6 leading-tight">
-            {t('ehpad.study.title')}
+            Directeur d'EHPAD? Participez à notre étude sur la prise en charge de l'inconfort digestif.
           </h2>
 
           {/* Texte descriptif */}
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            {t('ehpad.study.description')}
+            Nous menons une étude sur la gestion des troubles du transit (constipation sévère, fécalomes). L'objectif est de valider l'apport de notre nouvelle solution d'irrigation automatisée pour améliorer le confort des résidents et simplifier le travail des soignants.
           </p>
 
           {/* Bouton d'action */}
@@ -31,7 +29,7 @@ export default function EhpadStudySection() {
             onClick={() => navigate("/questionnaire")}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
           >
-            {t('ehpad.study.cta')}
+            Répondre au questionnaire
           </Button>
         </div>
       </div>

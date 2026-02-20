@@ -12,10 +12,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
-  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     nom: "",
     fonction: "",
@@ -30,12 +28,12 @@ export default function ContactSection() {
     
     // Validation basique
     if (!formData.nom || !formData.email || !formData.message) {
-      toast.error(t('contact_page.required_fields'));
+      toast.error("Veuillez remplir tous les champs obligatoires");
       return;
     }
 
     // Simulation d'envoi
-    toast.success(t('contact_page.success'));
+    toast.success("Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.");
     
     // Reset form
     setFormData({
@@ -65,11 +63,11 @@ export default function ContactSection() {
           <div>
             {/* Title */}
             <h2 className="mb-8">
-              {t('contact_page.form.heading')}
+              Parlons de votre projet
             </h2>
 
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              {t('contact_page.form.description')}
+              Que vous ayez besoin d'une réparation, d'un diagnostic technique ou d'une solution sur mesure, notre équipe est à votre écoute pour comprendre vos besoins et vous proposer une réponse adaptée.
             </p>
 
             {/* Rassurance */}
@@ -77,10 +75,10 @@ export default function ContactSection() {
               <Clock className="h-6 w-6 text-primary mr-4 flex-shrink-0 mt-1" strokeWidth={1.5} />
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-2">
-                  {t('contact_page.response_time')}
+                  Réponse sous 48h
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  {t('contact_page.response_time.desc')}
+                  Nous nous engageons à vous répondre dans les meilleurs délais pour étudier votre demande et vous proposer une solution adaptée.
                 </p>
               </div>
             </div>
@@ -91,7 +89,7 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="nom" className="text-foreground font-medium">
-                  {t('contact_page.form.name')}
+                  Nom *
                 </Label>
                 <Input
                   id="nom"
@@ -106,7 +104,7 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="fonction" className="text-foreground font-medium">
-                  {t('contact_page.form.function')}
+                  Fonction
                 </Label>
                 <Input
                   id="fonction"
@@ -120,7 +118,7 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="etablissement" className="text-foreground font-medium">
-                  {t('contact_page.form.establishment')}
+                  Établissement
                 </Label>
                 <Input
                   id="etablissement"
@@ -134,7 +132,7 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="email" className="text-foreground font-medium">
-                  {t('contact_page.form.email')}
+                  Email *
                 </Label>
                 <Input
                   id="email"
@@ -149,7 +147,7 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="telephone" className="text-foreground font-medium">
-                  {t('contact_page.form.phone')}
+                  Téléphone
                 </Label>
                 <Input
                   id="telephone"
@@ -163,13 +161,13 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="message" className="text-foreground font-medium">
-                  {t('contact_page.form.message')}
+                  Message *
                 </Label>
                 <Textarea
                   id="message"
                   name="message"
                   required
-                  rows={5}
+                  rows={6}
                   value={formData.message}
                   onChange={handleChange}
                   className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150 resize-none"
@@ -181,7 +179,7 @@ export default function ContactSection() {
                 size="lg"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 font-medium"
               >
-                {t('contact_page.form.submit')}
+                Envoyer le message
               </Button>
             </form>
           </div>

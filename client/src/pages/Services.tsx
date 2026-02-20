@@ -10,15 +10,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
-  const { t } = useLanguage();
   const services = [
     {
       icon: Wrench,
-      title: t('services.repair_beds'),
-      description: t('services.repair_beds.desc'),
+      title: "Réparation de lits médicalisés",
+      description: "Diagnostic et réparation complète des équipements critiques",
       details: [
         "Diagnostic mécanique et électrique",
         "Remplacement de vérins, moteurs, commandes",
@@ -34,8 +32,8 @@ export default function Services() {
     },
     {
       icon: Zap,
-      title: t('services.preventive'),
-      description: t('services.preventive.desc'),
+      title: "Maintenance préventive",
+      description: "Anticipation des pannes par interventions régulières",
       details: [
         "Planification d'interventions régulières",
         "Contrôle des systèmes électriques",
@@ -50,8 +48,8 @@ export default function Services() {
     },
     {
       icon: Stethoscope,
-      title: t('services.expertise'),
-      description: t('services.expertise.desc'),
+      title: "Expertise technique & diagnostic",
+      description: "Analyse approfondie et recommandations stratégiques",
       details: [
         "Analyse des dysfonctionnements complexes",
         "Évaluation de l'état du parc matériel",
@@ -66,8 +64,8 @@ export default function Services() {
     },
     {
       icon: Truck,
-      title: t('services.onsite'),
-      description: t('services.onsite.desc'),
+      title: "Intervention sur site",
+      description: "Déploiement rapide et discret chez vos établissements",
       details: [
         "Déplacement rapide et réactif",
         "Intervention en chambre ou atelier",
@@ -140,7 +138,7 @@ export default function Services() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-6 md:py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-bold text-slate-900 mb-6">
@@ -239,7 +237,7 @@ export default function Services() {
       </section>
 
       {/* ADN Industriel */}
-      <section className="py-6 md:py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-bold text-slate-900 mb-6">
@@ -299,7 +297,7 @@ export default function Services() {
       </section>
 
       {/* Bénéfices */}
-      <section className="py-6 md:py-16 bg-slate-50">
+      <section className="py-16 bg-slate-50">
         <div className="container">
             <h2 className="font-bold text-slate-900 mb-12 text-center">
             Bénéfices pour vos établissements
@@ -320,7 +318,7 @@ export default function Services() {
       </section>
 
       {/* Partenaire de confiance */}
-      <section className="py-6 md:py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-bold text-slate-900 mb-6">

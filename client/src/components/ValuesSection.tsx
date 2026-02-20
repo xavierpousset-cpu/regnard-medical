@@ -6,36 +6,35 @@
  */
 
 import { Award, Shield, Lightbulb } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
-const getValues = (t: (key: string) => string) => [
+const values = [
   {
     icon: Award,
-    title: t('values.expertise'),
-    description: t('values.expertise.description'),
+    title: "Expertise",
+    description:
+      "Une maîtrise technique approfondie des dispositifs médicaux, acquise par des années d'expérience terrain et une formation continue de nos équipes.",
   },
   {
     icon: Shield,
-    title: t('values.reliability'),
-    description: t('values.reliability.description'),
+    title: "Fiabilité",
+    description:
+      "Des processus rigoureux, des contrôles qualité systématiques et un engagement de résultat pour garantir la conformité et la sécurité de vos équipements.",
   },
   {
     icon: Lightbulb,
-    title: t('values.innovation'),
-    description: t('values.innovation.description'),
+    title: "Innovation",
+    description:
+      "Une capacité R&D interne qui nous permet de concevoir des solutions sur mesure, d'optimiser les équipements existants et d'anticiper les besoins futurs.",
   },
 ];
 
 export default function ValuesSection() {
-  const { t } = useLanguage();
-  const values = getValues(t);
-
   return (
     <section className="py-12 md:py-32 bg-background">
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          {t('values.commitments')}
+          Nos engagements
         </h2>
 
         {/* Grid */}
