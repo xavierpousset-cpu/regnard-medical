@@ -12,7 +12,7 @@ import { useLocation } from "wouter";
 
 const navItems = [
   {
-    label: "Nos prodotti",
+    label: "Nos produits",
     href: "#",
     isExternal: false,
     submenu: [
