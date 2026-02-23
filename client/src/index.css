@@ -43,10 +43,10 @@
 }
 
 :root {
-  /* Industrial Minimalism Color Palette */
-  --primary: oklch(0.55 0.15 220); /* Bleu acier #0EA5E9 */
+  /* Industrial Minimalism Color Palette - Aligned with Logo Blue #003D7A */
+  --primary: oklch(0.35 0.15 250); /* Bleu marine #003D7A (logo color) */
   --primary-foreground: oklch(1 0 0); /* Blanc pur */
-  --sidebar-primary: oklch(0.55 0.15 220);
+  --sidebar-primary: oklch(0.35 0.15 250);
   --sidebar-primary-foreground: oklch(1 0 0);
 
   --radius: 0rem; /* Pas de border-radius pour le minimalisme industriel */
@@ -60,7 +60,7 @@
   --secondary-foreground: oklch(0.35 0.01 240); /* Gris graphite #475569 */
   --muted: oklch(0.98 0 0);
   --muted-foreground: oklch(0.50 0.01 240); /* Gris moyen */
-  --accent: oklch(0.55 0.15 220); /* Bleu acier pour les accents */
+  --accent: oklch(0.35 0.15 250); /* Bleu marine pour les accents (logo color) */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);

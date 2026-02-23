@@ -70,9 +70,9 @@ export function HeaderContent() {
               className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-150"
             >
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/BeDJyMcSBxFSTGCS.png"
+                src="/logo-regnard.png"
                 alt="Regnard Medical Logo"
-                className="h-10 w-10"
+                className="h-10 w-10 object-contain"
               />
               <span className="font-display font-bold text-lg text-foreground tracking-tight">
                 REGNARD MEDICAL

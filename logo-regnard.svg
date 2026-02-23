@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .regnard-logo { fill: #003D7A; }
+    </style>
+  </defs>
+  
+  <!-- Smooth elliptical orbit -->
+  <g>
+    <!-- Top-left curve of ellipse -->
+    <path d="M 200 500 
+             C 150 350, 200 150, 450 100
+             C 650 70, 850 150, 950 350" 
+          stroke="#003D7A" stroke-width="140" fill="none" 
+          stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right curve of ellipse -->
+    <path d="M 950 350 
+             C 1000 550, 950 800, 750 900" 
+          stroke="#003D7A" stroke-width="140" fill="none" 
+          stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Bottom-left curve of ellipse -->
+    <path d="M 750 900 
+             C 500 950, 250 900, 150 750" 
+          stroke="#003D7A" stroke-width="140" fill="none" 
+          stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Left curve of ellipse -->
+    <path d="M 150 750 
+             C 100 600, 150 500, 200 500" 
+          stroke="#003D7A" stroke-width="140" fill="none" 
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Letter R -->
+  <g class="regnard-logo">
+    <!-- Vertical stem -->
+    <rect x="320" y="250" width="160" height="700" rx="30"/>
+    
+    <!-- Top bowl (rounded part) -->
+    <ellipse cx="520" cy="380" rx="200" ry="140" fill="#003D7A"/>
+    <rect x="320" y="250" width="200" height="140" fill="#003D7A"/>
+    
+    <!-- Diagonal leg -->
+    <polygon points="480,520 480,600 750,950 900,950 600,520" fill="#003D7A"/>
+    
+    <!-- Connection piece -->
+    <rect x="320" y="500" width="200" height="120" rx="15" fill="#003D7A"/>
+  </g>
+</svg>
