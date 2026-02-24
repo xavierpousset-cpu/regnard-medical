@@ -152,6 +152,13 @@ function vitePluginManusDebugCollector(): Plugin {
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
+// Disable HMR in Manus environment (uses auto-detection)
+const hmrConfig = process.env.VITE_APP_ID ? false : {
+  host: 'localhost',
+  port: 5173,
+  protocol: 'ws',
+};
+
 export default defineConfig({
   plugins,
   resolve: {
@@ -183,17 +190,14 @@ export default defineConfig({
   },
   server: {
     host: true,
-    hmr: {
-      host: 'localhost',
-      port: 5173,
-      protocol: 'ws',
-    },
+    hmr: hmrConfig,
     allowedHosts: [
       ".manuspre.computer",
       ".manus.computer",
       ".manus-asia.computer",
       ".manuscomputer.ai",
       ".manusvm.computer",
+      ".manus.space",
       "localhost",
       "127.0.0.1",
     ],
