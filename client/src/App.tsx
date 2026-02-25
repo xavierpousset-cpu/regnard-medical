@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ";
 import ContactPage from "./pages/ContactPage";
 import About from "./pages/About";
 import DemandeDevis from "./pages/DemandeDevis";
+import RelaxDivan from "./pages/RelaxDivan";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -26,6 +27,7 @@ function Router() {
       <Route path={"/questionnaire-ehpad"} component={QuestionnaireEHPAD} />
       <Route path={"/oprep-divan"} component={OPrepDivan} />
       <Route path={"/oprep-altesse"} component={OPrepAltesse} />
+      <Route path={"/relax-divan"} component={RelaxDivan} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/forum"} component={Forum} />
       <Route path={"/services"} component={Services} />

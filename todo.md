@@ -33,3 +33,11 @@
 - [x] B-06: Corriger le lien du questionnaire Tally sur la page d'accueil (erreur 404) - CORRIGÉ
 - [x] B-07: Intégrer le nouveau logo Regnard dans le site - COMPLÉTÉ
 - [x] B-08: Adapter la palette de couleurs au bleu du logo - COMPLÉTÉ
+
+## Nouvelles Pages Produits
+- [x] Créer la page produit RELAX Divan (WC pour patients allongés)
+  - [x] Générer images (version fixe + mobile)
+  - [x] Créer composant RelaxDivan.tsx
+  - [x] Ajouter route /relax-divan
+  - [x] Ajouter navigation dans ProductsSection
+  - [x] Tester formulaire de devis

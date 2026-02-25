@@ -18,6 +18,7 @@ const navItems = [
     submenu: [
       { label: "O-PREP®DIVAN", href: "/oprep-divan" },
       { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
+      { label: "RELAX®DIVAN", href: "/relax-divan" },
     ],
   },
   { label: "Nos services", href: "/services", isExternal: false },
