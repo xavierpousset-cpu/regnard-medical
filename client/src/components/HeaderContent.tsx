@@ -12,24 +12,29 @@ import { useLocation } from "wouter";
 
 const navItems = [
   {
-    label: "Nos produits",
+    label: "Nos solutions",
     href: "#",
     isExternal: false,
     submenu: [
-      { label: "O-PREP®DIVAN", href: "/oprep-divan" },
-      { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
-      { label: "RELAX®DIVAN", href: "/relax-divan" },
+      { label: "Hygiène Allongée", href: "/relax-divan" },
+      { label: "Coloscopie", href: "#", hasNestedSubmenu: true },
+      { label: "Réparation", href: "/reparation" },
     ],
   },
-  { label: "Nos services", href: "/services", isExternal: false },
   { label: "Forum", href: "/forum", isExternal: false },
   { label: "FAQ", href: "/faq", isExternal: false },
   { label: "À propos", href: "/about", isExternal: false },
 ];
 
+const coloscopieSubmenu = [
+  { label: "O-PREP®DIVAN", href: "/oprep-divan" },
+  { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
+];
+
 export function HeaderContent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openNestedSubmenu, setOpenNestedSubmenu] = useState<string | null>(null);
   const { user, isAuthenticated, logout } = useAuth();
   const [, setLocation] = useLocation();
 
@@ -103,16 +108,34 @@ export function HeaderContent() {
 
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className="absolute left-0 mt-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="absolute left-0 mt-0 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     {item.submenu.map((subitem) => (
-                      <a
-                        key={subitem.label}
-                        href={subitem.href}
-                        onClick={() => window.scrollTo(0, 0)}
-                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg"
-                      >
-                        {subitem.label}
-                      </a>
+                      <div key={subitem.label} className="relative group/nested">
+                        <a
+                          href={subitem.href}
+                          onClick={() => window.scrollTo(0, 0)}
+                          className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg flex items-center justify-between"
+                        >
+                          {subitem.label}
+                          {subitem.hasNestedSubmenu && <ChevronDown className="h-4 w-4" />}
+                        </a>
+
+                        {/* Nested Submenu for Coloscopie */}
+                        {subitem.hasNestedSubmenu && (
+                          <div className="absolute left-full top-0 ml-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
+                            {coloscopieSubmenu.map((nestedItem) => (
+                              <a
+                                key={nestedItem.label}
+                                href={nestedItem.href}
+                                onClick={() => window.scrollTo(0, 0)}
+                                className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg"
+                              >
+                                {nestedItem.label}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -218,17 +241,48 @@ export function HeaderContent() {
                   {item.submenu && openSubmenu === item.label && (
                     <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
                       {item.submenu.map((subitem) => (
-                        <a
-                          key={subitem.label}
-                          href={subitem.href}
-                          className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
-                          onClick={() => {
-                            window.scrollTo(0, 0);
-                            setMobileMenuOpen(false);
-                          }}
-                        >
-                          {subitem.label}
-                        </a>
+                        <div key={subitem.label}>
+                          <button
+                            onClick={() => {
+                              if (subitem.hasNestedSubmenu) {
+                                setOpenNestedSubmenu(openNestedSubmenu === subitem.label ? null : subitem.label);
+                              } else {
+                                window.scrollTo(0, 0);
+                                setLocation(subitem.href);
+                                setMobileMenuOpen(false);
+                              }
+                            }}
+                            className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center justify-between"
+                          >
+                            {subitem.label}
+                            {subitem.hasNestedSubmenu && (
+                              <ChevronDown
+                                className={`h-4 w-4 transition-transform duration-200 ${
+                                  openNestedSubmenu === subitem.label ? "rotate-180" : ""
+                                }`}
+                              />
+                            )}
+                          </button>
+
+                          {/* Mobile Nested Submenu */}
+                          {subitem.hasNestedSubmenu && openNestedSubmenu === subitem.label && (
+                            <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
+                              {coloscopieSubmenu.map((nestedItem) => (
+                                <a
+                                  key={nestedItem.label}
+                                  href={nestedItem.href}
+                                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
+                                  onClick={() => {
+                                    window.scrollTo(0, 0);
+                                    setMobileMenuOpen(false);
+                                  }}
+                                >
+                                  {nestedItem.label}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
