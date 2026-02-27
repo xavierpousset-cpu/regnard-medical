@@ -48,11 +48,11 @@ export default function ExpertVideoSection() {
           {/* Video Column (spans 2 columns on large screens) */}
           <div className="lg:col-span-2">
             <div className="relative w-full bg-black rounded-2xl overflow-hidden shadow-lg">
-              {/* YouTube Embed */}
+              {/* YouTube Embed with Custom Thumbnail */}
               <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/mqtNrQ7nJVQ"
+                  src="https://www.youtube.com/embed/mqtNrQ7nJVQ?vi=1"
                   title="Le mot du Gastro-entérologue : Pourquoi choisir O-PREP ?"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
