@@ -80,7 +80,7 @@ export default function OPrepDivan() {
               Solution d'hydro-lavage colique haute performance
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système complet d'irrigation du côlon par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
+              Un système complet d'irrigation transanale (ITA) par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button

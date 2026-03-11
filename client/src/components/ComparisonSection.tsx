@@ -48,7 +48,7 @@ export default function ComparisonSection() {
             L'Excellence Technologique au service de la Sécurité
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Pourquoi O-PREP® DIVAN redéfinit les standards de l'irrigation colique médicale.
+            Pourquoi O-PREP® DIVAN redéfinit les standards de l'irrigation transanale (ITA) médicale.
           </p>
         </div>
 

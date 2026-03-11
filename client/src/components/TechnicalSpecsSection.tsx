@@ -24,7 +24,7 @@ export default function TechnicalSpecsSection() {
     {
       icon: Waves,
       label: "Principe de fonctionnement",
-      value: "Irrigation colique par gravité naturelle (statique)",
+      value: "Irrigation transanale (ITA) par gravité naturelle (statique)",
     },
     {
       icon: Droplet,
@@ -183,7 +183,7 @@ export default function TechnicalSpecsSection() {
                 Sécurité par la Physique
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                La pression du O-PREP® DIVAN est limitée physiquement par la hauteur du réservoir (90 cm), garantissant une basse pression constante de 0,7 PA, conforme aux recommandations de sécurité pour l'irrigation colique. Cette approche élimine les risques liés aux systèmes de régulation électronique.
+                La pression du O-PREP® DIVAN est limitée physiquement par la hauteur du réservoir (90 cm), garantissant une basse pression constante de 0,7 PA, conforme aux recommandations de sécurité pour l'irrigation transanale (ITA). Cette approche élimine les risques liés aux systèmes de régulation électronique.
               </p>
             </div>
           </div>

@@ -59,3 +59,10 @@
 - [x] Corriger la visibilité du bouton de connexion sur la page Forum (déplacer en haut)
 - [x] Ajouter l'image atelier avec filtre noir sur la page À propos
 - [x] Déplacer le segment comparatif de la page d'accueil vers la page O-PREP DIVAN
+
+## Corrections Terminologie Médicale
+
+- [x] Remplacer "irrigation du côlon" par "irrigation transanale (ITA)" dans OPrepDivan.tsx
+- [x] Remplacer "irrigation du côlon" par "irrigation transanale (ITA)" dans OPrepAltesse.tsx
+- [x] Remplacer "irrigation colique" par "irrigation transanale (ITA)" dans ComparisonSection.tsx
+- [x] Remplacer "irrigation colique" par "irrigation transanale (ITA)" dans TechnicalSpecsSection.tsx

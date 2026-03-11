@@ -77,7 +77,7 @@ export default function OPrepAltesse() {
               Solution d'hydro-lavage colique compacte et discrète
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système légèr d'irrigation du côlon, pensé pour les environnements où la simplicité et l'accessibilité sont prioritaires.
+              Un système légér d'irrigation transanale (ITA), pensé pour les environnements où la simplicité et l'accessibilité sont prioritaires.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -112,7 +112,7 @@ export default function OPrepAltesse() {
             <div className="flex-1">
               <h2 className="font-bold text-foreground mb-8">Hydro-lavage colique compact et continu</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®ALTESSE est une solution compacte avec un réservoir de 2 litres alimenté en continu par de l'eau chaude. Un mitigeur assure la température optimale pour une irrigation douce et contrôlée du côlon.
+                O-PREP®ALTESSE est une solution compacte avec un réservoir de 2 litres alimenté en continu par de l'eau chaude. Un mitigeur assure la température optimale pour une irrigation transanale (ITA) douce et contrôlée.
               </p>
               <ul className="space-y-4">
                 {[
