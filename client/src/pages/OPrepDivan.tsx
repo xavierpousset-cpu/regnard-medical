@@ -76,18 +76,18 @@ export default function OPrepDivan() {
         backgroundPosition: 'center',
       }}>
         {/* Black overlay filter */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/75" />
         {/* Content wrapper with relative positioning */}
         <div className="relative z-10">
           <div className="container">
             <div className="max-w-3xl">
-              <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
+              <h1 className="font-bold text-white mb-6 leading-tight whitespace-nowrap text-5xl">
                 O-PREP® DIVAN
               </h1>
-              <p className="text-2xl text-primary font-semibold mb-6">
+              <p className="text-2xl text-blue-300 font-semibold mb-6">
                 Solution d'hydro-lavage colique haute performance
               </p>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-lg text-gray-100 mb-10 leading-relaxed">
                 Un système complet d'irrigation transanale (ITA) par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
