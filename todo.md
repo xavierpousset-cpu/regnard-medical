@@ -66,3 +66,7 @@
 - [x] Remplacer "irrigation du côlon" par "irrigation transanale (ITA)" dans OPrepAltesse.tsx
 - [x] Remplacer "irrigation colique" par "irrigation transanale (ITA)" dans ComparisonSection.tsx
 - [x] Remplacer "irrigation colique" par "irrigation transanale (ITA)" dans TechnicalSpecsSection.tsx
+
+## Améliorations Visuelles (Session actuelle)
+
+- [x] Ajouter l'image du O-PREP DIVAN en fond du hero avec filtre noir

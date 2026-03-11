@@ -70,32 +70,41 @@ export default function OPrepDivan() {
     <div className="min-h-screen flex flex-col">
       <Header />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              O-PREP® DIVAN
-            </h1>
-            <p className="text-2xl text-primary font-semibold mb-6">
-              Solution d'hydro-lavage colique haute performance
-            </p>
-            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système complet d'irrigation transanale (ITA) par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={scrollToForm}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold"
-              >
-                Demander un devis
-              </Button>
-              <Button
-                onClick={scrollToSurvey}
-                variant="outline"
-                className="border-2 border-foreground px-8 py-6 text-base font-semibold"
-              >
-                Participer à l'enquête terrain
-              </Button>
+      <section className="relative pt-32 pb-24 mt-20 overflow-hidden" style={{
+        backgroundImage: 'url(/oprep-divan-hero.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+        {/* Black overlay filter */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Content wrapper with relative positioning */}
+        <div className="relative z-10">
+          <div className="container">
+            <div className="max-w-3xl">
+              <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
+                O-PREP® DIVAN
+              </h1>
+              <p className="text-2xl text-primary font-semibold mb-6">
+                Solution d'hydro-lavage colique haute performance
+              </p>
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                Un système complet d'irrigation transanale (ITA) par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={scrollToForm}
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold"
+                >
+                  Demander un devis
+                </Button>
+                <Button
+                  onClick={scrollToSurvey}
+                  variant="outline"
+                  className="border-2 border-foreground px-8 py-6 text-base font-semibold"
+                >
+                  Participer à l'enquête terrain
+                </Button>
+              </div>
             </div>
           </div>
         </div>
