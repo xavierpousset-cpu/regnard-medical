@@ -76,7 +76,7 @@ export default function OPrepDivan() {
         backgroundPosition: 'center',
       }}>
         {/* Black overlay filter */}
-        <div className="absolute inset-0 bg-black/75" />
+        <div className="absolute inset-0 bg-black/40" />
         {/* Content wrapper with relative positioning */}
         <div className="relative z-10">
           <div className="container">
