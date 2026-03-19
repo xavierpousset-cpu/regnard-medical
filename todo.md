@@ -82,3 +82,23 @@
 - [x] Réduire le titre de 74 à 30-60 caractères (nouveau titre : 47 caractères)
 - [x] Réduire la description meta de 179 à 50-160 caractères (nouvelle description : 128 caractères)
 - [x] Réduire les mots-clés de 9 à 3-8 ciblés (4 mots-clés ciblés)
+
+## Optimisation SEO Avancée (Prompt Expert)
+
+### Balises Meta par Page
+- [x] Créé fichier shared/seo-metadata.ts avec métadonnées pour toutes les pages
+
+### Mots-clés Prioritaires par Page
+- [x] Mots-clés par catégorie définis dans seo-metadata.ts
+- [x] Longue traîne incluse pour meilleur SEO
+
+### Attributs Alt pour Images
+- [x] Alt descriptifs ajoutés aux images O-PREP DIVAN
+- [x] Alt ajouté à l'image de l'atelier dans About.tsx
+
+### Sitemap et Robots.txt
+- [x] Sitemap.xml mis à jour avec toutes les pages et URLs correctes
+- [x] Robots.txt mis à jour avec lien vers sitemap.xml
+
+### Structure des Headings
+- [x] Vérifié : h1 unique par page sur toutes les pages principales

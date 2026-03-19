@@ -23,7 +23,7 @@ export default function About() {
           <div className="absolute inset-0">
             <img
               src="/atelier-regnard.jpg"
-              alt="Atelier Regnard Medical"
+              alt="Atelier Regnard Medical - Conception et fabrication de dispositifs médicaux innovants"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40"></div>

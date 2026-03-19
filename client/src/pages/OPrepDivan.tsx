@@ -117,7 +117,7 @@ export default function OPrepDivan() {
             <div className="flex-1">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/AjWtaixutMRRvwhz.png"
-                alt="O-PREP DIVAN - Système complet de préparation coloscopique"
+                alt="O-PREP® DIVAN - Système complet d'irrigation intestinale pour préparation coloscopique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -154,7 +154,7 @@ export default function OPrepDivan() {
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/rckyYSDxtkStRwPG.JPG"
-                alt="O-PREP DIVAN - Vue d'ensemble du système"
+                alt="O-PREP® DIVAN - Vue d'ensemble du système d'irrigation avec interface de contrôle"
                 className="w-full h-64 object-cover"
               />
               <div className="p-4 bg-secondary">
@@ -164,7 +164,7 @@ export default function OPrepDivan() {
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/jkVcvbGvPGKbvxTQ.JPG"
-                alt="O-PREP DIVAN - Installation en atelier"
+                alt="O-PREP® DIVAN - Installation et configuration du système en atelier"
                 className="w-full h-64 object-cover"
               />
               <div className="p-4 bg-secondary">
@@ -174,7 +174,7 @@ export default function OPrepDivan() {
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/wsnAjuGFpScEqZaO.JPG"
-                alt="O-PREP DIVAN - Détail du bassin ergonomique"
+                alt="O-PREP® DIVAN - Bassin ergonomique avec rampes de sécurité pour patients"
                 className="w-full h-64 object-cover"
               />
               <div className="p-4 bg-secondary">
