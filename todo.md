@@ -106,3 +106,6 @@
 ## Modifications Récentes
 
 - [x] Masqué la page O-SAN du menu (en attente de préparation)
+
+- [x] Retiré la section "Le mot du gastroentérologue" de la page O-PREP DIVAN
+- [x] Changé la couleur du bouton questionnaire en blanc pour meilleure visibilité sur fond noir

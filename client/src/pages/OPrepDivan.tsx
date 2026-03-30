@@ -12,7 +12,7 @@ import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
-import ExpertVideoSection from "@/components/ExpertVideoSection";
+// import ExpertVideoSection from "@/components/ExpertVideoSection"; // Retiré temporairement
 import ComparisonSection from "@/components/ComparisonSection";
 import { trpc } from "@/lib/trpc";
 
@@ -99,8 +99,7 @@ export default function OPrepDivan() {
                 </Button>
                 <Button
                   onClick={scrollToSurvey}
-                  variant="outline"
-                  className="border-2 border-foreground px-8 py-6 text-base font-semibold"
+                  className="bg-white hover:bg-gray-100 text-black px-8 py-6 text-base font-semibold border-2 border-white"
                 >
                   Participer à l'enquête terrain
                 </Button>
@@ -329,8 +328,8 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Technical Specifications & Compliance */}
       <TechnicalSpecsSection />
 
-      {/* Expert Video Section */}
-      <ExpertVideoSection />
+      {/* Expert Video Section - Retiré temporairement */}
+      {/* <ExpertVideoSection /> */}
 
       {/* Survey Section */}
       <section className="py-24 bg-background">
