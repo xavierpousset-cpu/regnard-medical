@@ -23,7 +23,7 @@ const trustCards: TrustCard[] = [
     location: "Bobigny, France",
     description: "Centre hospitalo-universitaire de référence en région parisienne",
     link: "https://www.aphp.fr/hopitaux/avicenne",
-    imageUrl: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/Avicenne_e5e5a3d4.jpg",
     imageAlt: "Hôpital Avicenne – AP-HP"
   },
   {
@@ -32,7 +32,7 @@ const trustCards: TrustCard[] = [
     location: "Florence, Italie",
     description: "Clinique privée spécialisée, orientée parcours patient et innovation",
     link: "https://villadonatello.com",
-    imageUrl: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/Piazzale_donatello,_villa_donatello_01_41c638a7.webp",
     imageAlt: "Villa Donatello"
   },
   {
@@ -41,7 +41,7 @@ const trustCards: TrustCard[] = [
     location: "Gerenzano / Castellanza, Italie",
     description: "Hôpital du groupe Humanitas, reconnu pour son excellence médicale",
     link: "https://www.materdomini.it",
-    imageUrl: "https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/Edificio-3__HumanitasMaterDomini_36966384.jpg",
     imageAlt: "Humanitas Mater Domini"
   }
 ];
