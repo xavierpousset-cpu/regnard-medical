@@ -104,14 +104,14 @@ function PreviewModal({ article, isOpen, onClose }: PreviewModalProps) {
           </h3>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors flex-shrink-0 ml-4"
           >
             ✕
           </button>
         </div>
 
         {/* Modal Content */}
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-auto bg-gray-100 flex items-center justify-center">
           {article.pdfEmbedUrl.endsWith('.pdf') ? (
             <iframe
               src={article.pdfEmbedUrl}
@@ -119,11 +119,13 @@ function PreviewModal({ article, isOpen, onClose }: PreviewModalProps) {
               title={article.title}
             />
           ) : (
-            <img
-              src={article.pdfEmbedUrl}
-              alt={article.title}
-              className="w-full h-auto"
-            />
+            <div className="w-full h-full flex items-center justify-center p-4">
+              <img
+                src={article.pdfEmbedUrl}
+                alt={article.title}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           )}
         </div>
 
@@ -154,9 +156,9 @@ export default function Bibliography() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 bg-primary text-primary-foreground scroll-mt-20">
           <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Bibliographie</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 pt-8">Bibliographie</h1>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl">
               Découvrez les études scientifiques et articles de recherche sur les méthodes de préparation colique et l'efficacité des solutions innovantes.
             </p>
