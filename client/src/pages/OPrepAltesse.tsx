@@ -269,6 +269,57 @@ export default function OPrepAltesse() {
         </div>
       </section>
 
+      {/* Evidence-Based Reassurance Section */}
+      <section className="py-24 bg-background">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Fondé sur la science</h2>
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
+            O-PREP®ALTESSE s'appuie sur des études cliniques rigoureuses et des retours d'expérience de terrain en établissements de santé.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-secondary p-8 rounded-lg border border-border">
+              <h3 className="font-semibold text-foreground mb-4 text-lg">Efficacité clinique validée</h3>
+              <p className="text-muted-foreground mb-6">
+                Les études montrent que les systèmes d'irrigation colique haute performance offrent des taux de détection des polypes adénomateux et sessiles significativement supérieurs aux préparations orales traditionnelles.
+              </p>
+              <a href="/bibliographie#article-1" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2">
+                Consulter l'étude →
+              </a>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg border border-border">
+              <h3 className="font-semibold text-foreground mb-4 text-lg">Acceptabilité patient</h3>
+              <p className="text-muted-foreground mb-6">
+                Plus de 95% de satisfaction chez les patients ayant utilisé O-PREP®ALTESSE, avec une volonté de réutilisation pour les coloscopies futures.
+              </p>
+              <a href="/bibliographie#article-3" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2">
+                Lire les résultats →
+              </a>
+            </div>
+          </div>
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-8">
+            <p className="text-foreground mb-4">
+              <span className="font-semibold">Vous cherchez des preuves scientifiques complètes ?</span> Consultez notre bibliographie avec 5 articles de référence sur l'irrigation colique et les solutions innovantes.
+            </p>
+            <a href="/bibliographie" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit">
+              Accéder à la bibliographie complète →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Established Trust Section */}
+      <section id="trust-section" className="py-24 bg-secondary">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-foreground mb-4">Déjà en place dans des établissements reconnus</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
+            O-PREP®ALTESSE est utilisé dans plusieurs établissements hospitaliers et cliniques en Europe, reconnus pour leur excellence médicale.
+          </p>
+          <a href="/#trust-section" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit mb-8">
+            Découvrir nos partenaires établissements →
+          </a>
+        </div>
+      </section>
+
       {/* Survey Section */}
       <section className="py-24 bg-background">
         <div className="container max-w-3xl">
