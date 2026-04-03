@@ -15,6 +15,7 @@ import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
 import ValuesSection from "@/components/ValuesSection";
 import WhyUsSection from "@/components/WhyUsSection";
+import TrustSection from "@/components/TrustSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <ProductsSection />
         <EhpadStudySection />
         <ValuesSection />
+        <TrustSection />
         <WhyUsSection />
         <ContactSection />
       </main>

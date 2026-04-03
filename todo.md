@@ -118,3 +118,9 @@
 - [x] Ajouter les segments d'articles avec résumés
 - [x] Intégrer la page dans la navigation
 - [x] Tester et valider (tests passent, compilation sans erreurs)
+
+## Section "Ils nous font confiance" sur Homepage
+
+- [x] Créer le composant TrustSection avec design premium (3 établissements)
+- [x] Intégrer la section dans la homepage
+- [x] Tester et valider le rendu (tests passent, compilation sans erreurs)
