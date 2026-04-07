@@ -128,3 +128,7 @@
 ## Corrections Informations de Contact
 
 - [x] Corriger les informations de contact sur la page Contact
+
+## Modifications Titre Section Établissements
+
+- [x] Changer le titre "Ils nous font confiance" en "Ils utilisent O-Prep" sur la homepage

@@ -1,5 +1,5 @@
 /**
- * Trust Section - "Ils nous font confiance"
+ * Trust Section - "Ils utilisent O-Prep"
  * Showcases real healthcare establishments using O'PREP
  * Premium medical design with official institutional images
  */
@@ -53,7 +53,7 @@ export default function TrustSection() {
         {/* Header */}
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Ils nous font confiance
+            Ils utilisent O-Prep
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             O'PREP est aujourd'hui utilisé dans plusieurs établissements hospitaliers et cliniques en Europe.
