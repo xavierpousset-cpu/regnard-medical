@@ -70,8 +70,8 @@ export default function OPrepAltesse() {
       <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              O-PREP® ALTESSE
+            <h1 className="font-bold text-foreground mb-6 leading-tight">
+              O-PREP® ALTESSE <span className="text-sm font-normal text-muted-foreground">(en développement)</span>
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
               Solution d'hydro-lavage colique compacte et discrète

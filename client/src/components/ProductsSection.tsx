@@ -69,9 +69,16 @@ export default function ProductsSection() {
 
               {/* Content */}
               <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                <h3 className="mb-8 font-display font-bold text-foreground">
-                  {product.name}
-                </h3>
+                <div className="flex items-center gap-3 mb-8">
+                  <h3 className="font-display font-bold text-foreground">
+                    {product.name}
+                  </h3>
+                  {product.name === "O-PREP® ALTESSE" && (
+                    <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">
+                      en développement
+                    </span>
+                  )}
+                </div>
 
                 <ul className="space-y-4 mb-8">
                   {product.benefits.map((benefit, idx) => (

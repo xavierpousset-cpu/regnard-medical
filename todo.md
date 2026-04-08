@@ -132,3 +132,9 @@
 ## Modifications Titre Section Établissements
 
 - [x] Changer le titre "Ils nous font confiance" en "Ils utilisent O-Prep" sur la homepage
+
+## Modifications Contenu O-PREP ALTESSE
+
+- [x] Supprimer la phrase "O'PREP fait l'objet d'évaluations cliniques en conditions réelles d'utilisation." de la TrustSection
+- [x] Ajouter "(en développement)" pour O-PREP ALTESSE sur la homepage
+- [x] Ajouter "(en développement)" pour O-PREP ALTESSE sur sa page produit

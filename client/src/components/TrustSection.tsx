@@ -103,12 +103,7 @@ export default function TrustSection() {
           ))}
         </div>
 
-        {/* Trust Statement */}
-        <div className="max-w-3xl mx-auto p-8 bg-primary/5 rounded-lg border border-primary/20">
-          <p className="text-center text-foreground font-medium">
-            O'PREP fait l'objet d'évaluations cliniques en conditions réelles d'utilisation.
-          </p>
-        </div>
+
       </div>
     </section>
   );
