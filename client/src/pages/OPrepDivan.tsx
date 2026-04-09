@@ -359,9 +359,6 @@ Il améliore significativement la qualité des soins et la sécurité des patien
             </div>
           </div>
           <div className="bg-primary/10 border border-primary/20 rounded-lg p-8">
-            <p className="text-foreground mb-4">
-              <span className="font-semibold">Vous cherchez des preuves scientifiques complètes ?</span> Consultez notre bibliographie avec 5 articles de référence sur l'irrigation colique et les solutions innovantes.
-            </p>
             <a href="/bibliographie" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit">
               Accéder à la bibliographie complète →
             </a>

@@ -154,3 +154,7 @@
 
 - [x] Retirer les images fake de réparation de lits médicalisés de la page Services
 - [x] Retirer les images fake de réparation de lits médicalisés de la page Réparations
+
+## Modifications Homepage Bibliographie
+
+- [x] Supprimer la phrase "Vous cherchez des preuves scientifiques..." de la section bibliographie en gardant le lien
