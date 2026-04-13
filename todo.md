@@ -162,3 +162,7 @@
 ## Modifications Page À Propos
 
 - [x] Supprimer la section "La rencontre Regnard L'Hirondel" de la page À propos
+
+## Remplacement Formulaire Tally
+
+- [x] Remplacer le formulaire Tally actuel par le nouveau formulaire (xXZ8yo)

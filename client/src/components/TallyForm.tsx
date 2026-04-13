@@ -39,13 +39,13 @@ export default function TallyForm() {
           {/* Formulaire Tally */}
           <div className="bg-card rounded-lg border border-border p-8">
             <iframe
-              src="https://tally.so/embed/ZjN5py?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/r/xXZ8yo?transparentBackground=1"
               width="100%"
               height="600"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
-              title="Formulaire de diagnostic technique"
+              title="Étude de marché O-PREP — Regnard Medical"
               className="w-full"
               style={{
                 minHeight: "600px",
