@@ -16,6 +16,7 @@ import ProductsSection from "@/components/ProductsSection";
 import ValuesSection from "@/components/ValuesSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import TrustSection from "@/components/TrustSection";
+import VideodigestBanner from "@/components/VideodigestBanner";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <EhpadStudySection />
         <ValuesSection />
         <TrustSection />
+        <VideodigestBanner />
         <WhyUsSection />
         <ContactSection />
       </main>

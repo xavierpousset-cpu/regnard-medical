@@ -11,6 +11,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VideodigestBanner from "@/components/VideodigestBanner";
 import { trpc } from "@/lib/trpc";
 
 export default function OPrepAltesse() {
@@ -313,6 +314,13 @@ export default function OPrepAltesse() {
           <a href="/#trust-section" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit mb-8">
             Découvrir nos partenaires établissements →
           </a>
+        </div>
+      </section>
+
+      {/* Videodigest Event Banner */}
+      <section className="py-12 bg-background">
+        <div className="container">
+          <VideodigestBanner variant="compact" />
         </div>
       </section>
 

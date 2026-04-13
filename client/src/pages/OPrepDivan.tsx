@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
 // import ExpertVideoSection from "@/components/ExpertVideoSection"; // Retiré temporairement
 import ComparisonSection from "@/components/ComparisonSection";
+import VideodigestBanner from "@/components/VideodigestBanner";
 import { trpc } from "@/lib/trpc";
 
 export default function OPrepDivan() {
@@ -319,6 +320,13 @@ Il améliore significativement la qualité des soins et la sécurité des patien
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Videodigest Event Banner */}
+      <section className="py-12 bg-background">
+        <div className="container">
+          <VideodigestBanner variant="compact" />
         </div>
       </section>
 

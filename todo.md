@@ -178,3 +178,11 @@
 - [x] Restructurer la page pour améliorer l'intégration du formulaire Tally
 - [x] Retirer la scrollbar de la page
 - [x] Cacher le footer jusqu'au scroll complet
+
+## Intégration Videodigest 2026
+
+- [x] Uploader les images officielles Videodigest
+- [x] Créer un composant VideodigestBanner pour les inserts
+- [x] Intégrer les inserts sur la homepage et pages produits
+- [x] Ajouter un CTA pour inviter à visiter le stand
+- [x] Tester l'affichage sur mobile et desktop
