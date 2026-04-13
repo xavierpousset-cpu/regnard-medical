@@ -120,8 +120,7 @@ export default function VideodigestBanner({
             </h3>
             <p className="text-sky-100 mb-4">
               Regnard Medical sera présent avec un stand dédié et une
-              présentation de 10 minutes sur nos solutions O-PREP®DIVAN et
-              O-PREP®ALTESSE. Venez nous rencontrer et discuter des dernières
+              présentation de 10 minutes sur nos solutions. Venez nous rencontrer et discuter des dernières
               avancées en préparation colique.
             </p>
             <ul className="space-y-2 text-sky-100">
@@ -133,10 +132,6 @@ export default function VideodigestBanner({
                 <span className="w-2 h-2 bg-sky-300 rounded-full"></span>
                 Stand d'exposition avec démonstrations
               </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-sky-300 rounded-full"></span>
-                Rencontrez notre équipe d'experts
-              </li>
             </ul>
           </div>
 
@@ -146,15 +141,8 @@ export default function VideodigestBanner({
               size="lg"
               className="bg-white text-sky-900 hover:bg-sky-50 font-semibold"
             >
-              Visiter notre stand
+              En savoir plus
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-            >
-              Voir le programme
             </Button>
           </div>
         </div>
