@@ -307,11 +307,8 @@ Il améliore significativement la qualité des soins et la sécurité des patien
             </p>
             <ul className="space-y-4">
               {[
-                "✔ Testé en environnement clinique",
                 "✔ Développé avec des professionnels de santé",
-                "✔ Adapté aux patients âgés et à mobilité réduite",
                 "✔ Conception française",
-                "✔ Système breveté / en cours de dépôt",
                 "✔ Conforme aux exigences des dispositifs médicaux",
               ].map((item, index) => (
                 <li key={index} className="text-foreground font-medium">

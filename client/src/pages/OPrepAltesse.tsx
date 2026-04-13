@@ -254,11 +254,9 @@ export default function OPrepAltesse() {
             </p>
             <ul className="space-y-4">
               {[
-                "✔ Testé en environnement clinique",
                 "✔ Développé avec des professionnels de santé",
                 "✔ Solution accessible et pragmatique",
                 "✔ Conception française",
-                "✔ Système breveté / en cours de dépôt",
                 "✔ Conforme aux exigences des dispositifs médicaux",
               ].map((item, index) => (
                 <li key={index} className="text-foreground font-medium">
