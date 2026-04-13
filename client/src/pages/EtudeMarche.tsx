@@ -27,13 +27,13 @@ export default function EtudeMarche() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       
       {/* Main content with fullscreen form */}
-      <main className="flex-1 w-full flex flex-col">
-        {/* Fullscreen form container - takes full viewport height minus header */}
-        <div className="w-full flex-1 pt-20" style={{ height: "calc(100vh - 80px)" }}>
+      <main className="flex-1 w-full">
+        {/* Fullscreen form container - takes full available height */}
+        <div className="w-full h-screen">
           <iframe
             data-tally-src="https://tally.so/r/xXZ8yo?transparentBackground=1"
             width="100%"
