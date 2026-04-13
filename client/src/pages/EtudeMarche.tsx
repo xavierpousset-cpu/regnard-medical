@@ -4,11 +4,9 @@
  * URL: /etude-marche
  * 
  * Design: Formulaire fullscreen sans scrollbar interne
- * Footer visible au scroll de la page
  */
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
 export default function EtudeMarche() {
@@ -27,32 +25,24 @@ export default function EtudeMarche() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col h-screen bg-background">
       <Header />
       
-      {/* Main content with fullscreen form */}
-      <main className="flex-1 w-full">
-        {/* Fullscreen form container - takes full available height */}
-        <div className="w-full h-screen">
-          <iframe
-            data-tally-src="https://tally.so/r/xXZ8yo?transparentBackground=1"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="Étude de marché O-PREP — Regnard Medical"
-            style={{
-              border: "none",
-              display: "block",
-            }}
-          />
-        </div>
-
-        {/* Footer - visible on scroll */}
-        <div className="w-full border-t border-border bg-background">
-          <Footer />
-        </div>
+      {/* Fullscreen form - takes all remaining space */}
+      <main className="flex-1 w-full overflow-hidden">
+        <iframe
+          data-tally-src="https://tally.so/r/xXZ8yo?transparentBackground=1"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          marginHeight={0}
+          marginWidth={0}
+          title="Étude de marché O-PREP — Regnard Medical"
+          style={{
+            border: "none",
+            display: "block",
+          }}
+        />
       </main>
 
       {/* CSS to hide Tally iframe scrollbar only */}
