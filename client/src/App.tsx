@@ -21,6 +21,8 @@ import OSanDivan from "./pages/OSanDivan";
 import Reparation from "./pages/Reparation";
 import Bibliography from "./pages/Bibliography";
 import EtudeMarche from "./pages/EtudeMarche";
+import PreparationColoscopie from "./pages/PreparationColoscopie";
+import FAQColoscopie from "./pages/FAQColoscopie";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -44,6 +46,8 @@ function Router() {
       <Route path={"/politique-confidentialite"} component={PrivacyPolicy} />
       <Route path={"/bibliographie"} component={Bibliography} />
       <Route path={"/etude-marche"} component={EtudeMarche} />
+      <Route path={"/preparation-coloscopie"} component={PreparationColoscopie} />
+      <Route path={"/faq-coloscopie"} component={FAQColoscopie} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

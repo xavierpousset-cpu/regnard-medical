@@ -54,6 +54,22 @@ export const pageMetaTags: Record<string, MetaTagsConfig> = {
     imageWidth: 1200,
     imageHeight: 630,
   },
+  '/preparation-coloscopie': {
+    title: 'Préparation Coloscopie : Hydrolavage Colique & Irrigation Transanale',
+    description: 'Guide complet de la préparation coloscopie : hydrolavage colique, irrigation transanale (ITA), alternatives aux laxatifs. Découvrez O-PREP® DIVAN.',
+    keywords: 'préparation coloscopie, hydrolavage colique, irrigation transanale, ITA, laxatifs, fécalome, constipation chronique, EHPAD',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/ImageOpenGraph_df52b19a.png',
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
+  '/faq-coloscopie': {
+    title: 'FAQ Coloscopie : Questions sur Préparation, Hydrolavage & Constipation',
+    description: 'Questions fréquemment posées sur la coloscopie, la préparation coloscopique, l\'hydrolavage colique, l\'irrigation transanale, la constipation chronique et le fécalome.',
+    keywords: 'FAQ coloscopie, questions coloscopie, préparation coloscopie, hydrolavage colique, irrigation transanale, constipation, fécalome, laxatifs',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/ImageOpenGraph_df52b19a.png',
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
 };
 
 export function getMetaTagsForPath(path: string): MetaTagsConfig | null {
@@ -116,5 +132,7 @@ function getCanonicalPath(title: string): string {
   if (title.includes('O-PREP® DIVAN')) return '/oprep-divan';
   if (title.includes('O-PREP® ALTESSE')) return '/oprep-altesse';
   if (title.includes('Étude de marché')) return '/etude-marche';
+  if (title.includes('Préparation Coloscopie')) return '/preparation-coloscopie';
+  if (title.includes('FAQ Coloscopie')) return '/faq-coloscopie';
   return '/';
 }

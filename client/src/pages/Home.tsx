@@ -26,6 +26,14 @@ export default function Home() {
         <HeroSection />
         <ExpertiseSection />
         <ProductsSection />
+        {/* Lien vers la page Préparation Coloscopie */}
+        <section className="py-12 bg-secondary text-center">
+          <div className="container">
+            <h2 className="text-2xl font-bold mb-4">Besoin d'informations sur la préparation coloscopique ?</h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">Découvrez notre guide complet sur l'hydrolavage colique, l'irrigation transanale et les alternatives aux laxatifs traditionnels.</p>
+            <a href="/preparation-coloscopie" className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">Lire le guide complet</a>
+          </div>
+        </section>
         <EhpadStudySection />
         <ValuesSection />
         <div id="etablissements">
