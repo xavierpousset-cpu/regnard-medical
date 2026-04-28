@@ -1,6 +1,5 @@
 {
-  "buildCommand": "pnpm install --frozen-lockfile && pnpm build",
-  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm vercel-build",
   "outputDirectory": "dist",
   "framework": "vite",
   "env": {
