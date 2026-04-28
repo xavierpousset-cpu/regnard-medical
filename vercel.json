@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm install && pnpm build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "nodeVersion": "22.x",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
